@@ -18,16 +18,16 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f57d353b41eb2e234b26064d63d8c5dd' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Filesystem/functions.php',
@@ -96,6 +96,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         array (
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
+            'RakibDevs\\Weather\\' => 18,
         ),
         'P' => 
         array (
@@ -321,13 +322,13 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
-            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
+            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
+            1 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
         ),
         'Spatie\\Ignition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/ignition/src',
-            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            1 => __DIR__ . '/..' . '/spatie/ignition/src',
         ),
         'Spatie\\FlareClient\\' => 
         array (
@@ -348,6 +349,10 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Ramsey\\Collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
+        'RakibDevs\\Weather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src',
         ),
         'Psy\\' => 
         array (
@@ -560,8 +565,10 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\CadastroController' => __DIR__ . '/../..' . '/app/Http/Controllers/CadastroController.php',
         'App\\Http\\Controllers\\CategoriaClassificadosController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriaClassificadosController.php',
         'App\\Http\\Controllers\\CategoriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriaController.php',
+        'App\\Http\\Controllers\\CidadeController' => __DIR__ . '/../..' . '/app/Http/Controllers/CidadeController.php',
         'App\\Http\\Controllers\\ClassificadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClassificadoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\DenunciaController' => __DIR__ . '/../..' . '/app/Http/Controllers/DenunciaController.php',
         'App\\Http\\Controllers\\DepoimentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepoimentoController.php',
         'App\\Http\\Controllers\\Home\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Home/HomeController.php',
@@ -583,7 +590,11 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Models\\Categoria' => __DIR__ . '/../..' . '/app/Models/Categoria.php',
+        'App\\Models\\CategoriaClassificados' => __DIR__ . '/../..' . '/app/Models/CategoriaClassificados.php',
         'App\\Models\\Classificado' => __DIR__ . '/../..' . '/app/Models/Classificado.php',
+        'App\\Models\\Denuncia' => __DIR__ . '/../..' . '/app/Models/Denuncia.php',
+        'App\\Models\\Depoimento' => __DIR__ . '/../..' . '/app/Models/Depoimento.php',
+        'App\\Models\\ImageClassificado' => __DIR__ . '/../..' . '/app/Models/ImageClassificado.php',
         'App\\Models\\Noticia' => __DIR__ . '/../..' . '/app/Models/Noticia.php',
         'App\\Models\\Publicidade' => __DIR__ . '/../..' . '/app/Models/Publicidade.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -5038,6 +5049,12 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
         'Psy\\VersionUpdater\\SelfUpdate' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/SelfUpdate.php',
+        'RakibDevs\\Weather\\Exceptions\\InvalidConfiguration' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/Exceptions/InvalidConfiguration.php',
+        'RakibDevs\\Weather\\Exceptions\\WeatherException' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/Exceptions/WeatherException.php',
+        'RakibDevs\\Weather\\Weather' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/Weather.php',
+        'RakibDevs\\Weather\\WeatherClient' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/WeatherClient.php',
+        'RakibDevs\\Weather\\WeatherFormat' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/WeatherFormat.php',
+        'RakibDevs\\Weather\\WeatherServiceProvider' => __DIR__ . '/..' . '/rakibdevs/openweather-laravel-api/src/WeatherServiceProvider.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',

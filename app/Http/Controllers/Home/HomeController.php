@@ -33,10 +33,6 @@ class HomeController extends Controller
         $publicidade = Publicidade::all();
         $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
 
-        echo "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=5f9d38f213a8a30d39467425352b1d6d";
-
-        // Get current weather by city name
-
         return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 

@@ -562,7 +562,7 @@ header.style-4 .form-inline input.form-control {
 }
 
 .megamenu ul.mega-list li a:hover {
-  color: #00A7B3;
+  color: #1866CF;
 }
 
 .megamenu ul.mega-list li:last-child {
@@ -683,7 +683,7 @@ li:hover .mega-posts-menu {
 }
 
 .dropdown>li>a:hover {
-  color: #00A7B3;
+  color: #1866CF;
 }
 
 .dropdown>li .dropdown.level2 {
@@ -1008,7 +1008,7 @@ body.boxed-style #container {
 }
 
 .slider-news-fullwidth .flexslider .slider-caption h2 a:hover {
-  color: #00A7B3;
+  color: #1866CF;
 }
 
 .slider-news-fullwidth .flexslider .slider-caption ul.post-tags {
@@ -1277,8 +1277,8 @@ a.zoom {
 
 .owl-theme .owl-controls .owl-buttons div:hover {
   color: #fff;
-  background: #00A7B3;
-  border: 1px solid #00A7B3;
+  background: #1866CF;
+  border: 1px solid #1866CF;
 }
 
 .owl-theme .owl-controls .owl-buttons div.owl-prev:after {

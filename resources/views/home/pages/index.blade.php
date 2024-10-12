@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- wide-news-heading
-                                                                                                                                                       ================================================== -->
+                                                                                                                                                           ================================================== -->
     <div class="wide-news-heading">
 
         <div class="item main-news">
@@ -13,11 +13,13 @@
                     @foreach ($noticiaslider as $item)
                         <li>
                             <div class="news-post large-image-post">
-                                <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
+                                <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 511px; height: 511px;" alt="">
                                 <div class="hover-box">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                         class="category category">{{ $item->categoria->name }}</a>
-                                    <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                    <h2><a
+                                            href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                    </h2>
                                     <ul class="post-tags">
                                         <li>
                                             <i class="lnr lnr-user"></i>
@@ -35,7 +37,8 @@
         @foreach ($noticias6 as $item)
             <div class="item">
                 <div class="news-post image-post">
-                    <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
+                    <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 255px; height: 255px;"
+                        alt="">
                     <div class="hover-box">
                         <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                             class="category category-world">{{ $item->categoria->name }}</a>
@@ -52,7 +55,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                                       ================================================== -->
+                                                                                                                                                           ================================================== -->
     <section id="content-section">
         <div class="container">
 

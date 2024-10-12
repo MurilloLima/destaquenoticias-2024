@@ -31,6 +31,7 @@
                             {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>20 comments</span></a></li> --}}
                             <li>
                                 <i class="lnr lnr-eye"></i>
+                                {{ count($total) }}
                                 {{-- visualizacoes --}}
                             </li>
                         </ul>

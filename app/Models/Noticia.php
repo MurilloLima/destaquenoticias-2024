@@ -22,4 +22,9 @@ class Noticia extends Model
     {
         return $this->belongsTo(Categoria::class, 'cat_id', 'id');
     }
+
+    public function views()
+    {
+        return $this->hasMany(view::class, 'noticia_id', 'id');
+    }
 }

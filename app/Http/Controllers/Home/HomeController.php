@@ -7,12 +7,18 @@ use App\Models\Categoria;
 use App\Models\Classificado;
 use App\Models\Noticia;
 use App\Models\Publicidade;
+use App\Models\view;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RakibDevs\Weather\Weather;
 
 class HomeController extends Controller
 {
+    private $view;
+    public function __construct(view $view)
+    {
+        $this->view = $view;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -65,7 +71,15 @@ class HomeController extends Controller
         $publicidade = Publicidade::all();
         $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
 
-        return view('home.pages.noticias.view', compact('data', 'cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        // conta visitas
+        $this->view->noticia_id = $data->id;
+        $this->view->total = +1;
+        $this->view->save();
+
+        $total = view::where('noticia_id', $data->id)->get();
+
+
+        return view('home.pages.noticias.view', compact('data', 'total', 'cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

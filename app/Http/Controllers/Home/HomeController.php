@@ -56,6 +56,15 @@ class HomeController extends Controller
     public function view($slug)
     {
         $data = Noticia::where('slug', '=', $slug)->first();
+        if ($data->id === NULL) {
+            $this->view->noticia_id = $data->id;
+            $this->view->total = +1;
+            $this->view->save();
+        } else {
+            $this->view->noticia_id = $data->id;
+            $this->view->total = +1;
+            $this->view->save();
+        }
         $cidades = Categoria::latest()->get();
         $classificados = Classificado::latest()->get();
         $noticias1 = Noticia::latest()->first();
@@ -70,15 +79,7 @@ class HomeController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
-
-        // conta visitas
-        $this->view->noticia_id = $data->id;
-        $this->view->total = +1;
-        $this->view->save();
-
-        $total = view::where('noticia_id', $data->id)->get();
-
-
+        $total = view::where('noticia_id', '=', $data->id)->get();
         return view('home.pages.noticias.view', compact('data', 'total', 'cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 

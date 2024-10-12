@@ -200,3 +200,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Back to Top -->
+    <a href="{{ route('home.pages.cadastro.index') }}" class="back-to-top">
+        {{-- divulgar --}}
+        <img src="{{ asset('home/img/avatar.png') }}" style="width: 100px" class="divulgar" alt="">
+    </a>

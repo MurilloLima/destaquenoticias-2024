@@ -24,9 +24,8 @@
     <link rel="stylesheet" href="{{ asset('home/fontawesome/css/font-awesome.min.css') }}">
     <script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/57/8b/common.js"></script>
     <script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/57/8b/util.js"></script>
-    <!--<< Title >>-->
     <title>Destaque notícias - @yield('title')</title>
-
+    
 </head>
 
 <body>

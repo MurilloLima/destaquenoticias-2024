@@ -180,6 +180,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'A' => 
         array (
             'App\\' => 4,
+            'AdinanCenci\\Climatempo\\' => 23,
         ),
     );
 
@@ -548,9 +549,24 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
             0 => __DIR__ . '/../..' . '/app',
             1 => __DIR__ . '/..' . '/laravel/pint/app',
         ),
+        'AdinanCenci\\Climatempo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src',
+        ),
     );
 
     public static $classMap = array (
+        'AdinanCenci\\Climatempo\\City\\City' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/City/City.php',
+        'AdinanCenci\\Climatempo\\City\\Search' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/City/Search.php',
+        'AdinanCenci\\Climatempo\\Climatempo' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Climatempo.php',
+        'AdinanCenci\\Climatempo\\Flood\\Flood' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Flood/Flood.php',
+        'AdinanCenci\\Climatempo\\Flood\\FloodRiskWrapper' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Flood/FloodRiskWrapper.php',
+        'AdinanCenci\\Climatempo\\Forecast\\FifteenDaysWrapper' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Forecast/FifteenDaysWrapper.php',
+        'AdinanCenci\\Climatempo\\Forecast\\Forecast' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Forecast/Forecast.php',
+        'AdinanCenci\\Climatempo\\Forecast\\SeventyTwoHoursWrapper' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Forecast/SeventyTwoHoursWrapper.php',
+        'AdinanCenci\\Climatempo\\History\\History' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/History/History.php',
+        'AdinanCenci\\Climatempo\\Weather\\Weather' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Weather/Weather.php',
+        'AdinanCenci\\Climatempo\\Wrapper' => __DIR__ . '/..' . '/adinan-cenci/climatempo-api/src/Wrapper.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
@@ -577,6 +593,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\PublicidadeController' => __DIR__ . '/../..' . '/app/Http/Controllers/PublicidadeController.php',
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
+        'App\\Http\\Controllers\\ViewController' => __DIR__ . '/../..' . '/app/Http/Controllers/ViewController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -598,6 +615,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Models\\Noticia' => __DIR__ . '/../..' . '/app/Models/Noticia.php',
         'App\\Models\\Publicidade' => __DIR__ . '/../..' . '/app/Models/Publicidade.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\view' => __DIR__ . '/../..' . '/app/Models/view.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

@@ -6,6 +6,17 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdinanCenci\\Climatempo\\City\\City' => $vendorDir . '/adinan-cenci/climatempo-api/src/City/City.php',
+    'AdinanCenci\\Climatempo\\City\\Search' => $vendorDir . '/adinan-cenci/climatempo-api/src/City/Search.php',
+    'AdinanCenci\\Climatempo\\Climatempo' => $vendorDir . '/adinan-cenci/climatempo-api/src/Climatempo.php',
+    'AdinanCenci\\Climatempo\\Flood\\Flood' => $vendorDir . '/adinan-cenci/climatempo-api/src/Flood/Flood.php',
+    'AdinanCenci\\Climatempo\\Flood\\FloodRiskWrapper' => $vendorDir . '/adinan-cenci/climatempo-api/src/Flood/FloodRiskWrapper.php',
+    'AdinanCenci\\Climatempo\\Forecast\\FifteenDaysWrapper' => $vendorDir . '/adinan-cenci/climatempo-api/src/Forecast/FifteenDaysWrapper.php',
+    'AdinanCenci\\Climatempo\\Forecast\\Forecast' => $vendorDir . '/adinan-cenci/climatempo-api/src/Forecast/Forecast.php',
+    'AdinanCenci\\Climatempo\\Forecast\\SeventyTwoHoursWrapper' => $vendorDir . '/adinan-cenci/climatempo-api/src/Forecast/SeventyTwoHoursWrapper.php',
+    'AdinanCenci\\Climatempo\\History\\History' => $vendorDir . '/adinan-cenci/climatempo-api/src/History/History.php',
+    'AdinanCenci\\Climatempo\\Weather\\Weather' => $vendorDir . '/adinan-cenci/climatempo-api/src/Weather/Weather.php',
+    'AdinanCenci\\Climatempo\\Wrapper' => $vendorDir . '/adinan-cenci/climatempo-api/src/Wrapper.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
@@ -32,6 +43,7 @@ return array(
     'App\\Http\\Controllers\\ProfileController' => $baseDir . '/app/Http/Controllers/ProfileController.php',
     'App\\Http\\Controllers\\PublicidadeController' => $baseDir . '/app/Http/Controllers/PublicidadeController.php',
     'App\\Http\\Controllers\\RegisterController' => $baseDir . '/app/Http/Controllers/RegisterController.php',
+    'App\\Http\\Controllers\\ViewController' => $baseDir . '/app/Http/Controllers/ViewController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -53,6 +65,7 @@ return array(
     'App\\Models\\Noticia' => $baseDir . '/app/Models/Noticia.php',
     'App\\Models\\Publicidade' => $baseDir . '/app/Models/Publicidade.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\view' => $baseDir . '/app/Models/view.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

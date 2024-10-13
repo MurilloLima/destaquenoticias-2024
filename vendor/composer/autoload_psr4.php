@@ -95,4 +95,5 @@ return array(
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'App\\' => array($baseDir . '/app', $vendorDir . '/laravel/pint/app'),
+    'AdinanCenci\\Climatempo\\' => array($vendorDir . '/adinan-cenci/climatempo-api/src'),
 );

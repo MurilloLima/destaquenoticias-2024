@@ -3,13 +3,22 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '35f329bc21eaa8d8daf019034d75c6046043f333',
+        'reference' => '6f8afe64f43c8c8c5daa385b5d722588785e69d2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'adinan-cenci/climatempo-api' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'reference' => '26b9b042ee13fa510d43ed56e02224ed5da0f746',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../adinan-cenci/climatempo-api',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.12.1',
             'version' => '0.12.1.0',
@@ -391,7 +400,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '35f329bc21eaa8d8daf019034d75c6046043f333',
+            'reference' => '6f8afe64f43c8c8c5daa385b5d722588785e69d2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

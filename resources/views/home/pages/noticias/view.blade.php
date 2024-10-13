@@ -15,7 +15,6 @@
 <meta property="og:image" itemprop="image" content="{{ asset('upload/noticias/' . $data->img) }}">
 <meta property="og:type" content="website">
 
-
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">

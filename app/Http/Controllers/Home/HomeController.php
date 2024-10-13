@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use AdinanCenci\Climatempo\Weather\Weather;
 use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Classificado;
@@ -10,7 +11,6 @@ use App\Models\Publicidade;
 use App\Models\view;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use RakibDevs\Weather\Weather;
 
 class HomeController extends Controller
 {
@@ -22,7 +22,7 @@ class HomeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $cidades = Categoria::latest()->get();
         $classificados = Classificado::latest()->get();

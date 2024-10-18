@@ -11,6 +11,8 @@ use App\Models\Publicidade;
 use App\Models\view;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use AdinanCenci\Climatempo\City\Search;
+use AdinanCenci\Climatempo\Climatempo;
 
 class HomeController extends Controller
 {
@@ -38,7 +40,8 @@ class HomeController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
-
+        //clima
+        
         return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
@@ -109,5 +112,10 @@ class HomeController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
+    }
+
+    public function privacy()
+    {
+        return 'ok';
     }
 }

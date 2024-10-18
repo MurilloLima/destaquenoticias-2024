@@ -2,8 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-    <!-- wide-news-heading
-                                                                                                                                                           ================================================== -->
+    <!-- wide-news-heading                                                                                                                                     ================================================== -->
     <div class="wide-news-heading">
 
         <div class="item main-news">
@@ -13,7 +12,8 @@
                     @foreach ($noticiaslider as $item)
                         <li>
                             <div class="news-post large-image-post">
-                                <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 511px; height: 511px;" alt="">
+                                <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 511px; height: 511px;"
+                                    alt="">
                                 <div class="hover-box">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                         class="category category">{{ $item->categoria->name }}</a>
@@ -55,7 +55,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                                           ================================================== -->
+                                                                                                                                                               ================================================== -->
     <section id="content-section">
         <div class="container">
 

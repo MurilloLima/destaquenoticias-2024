@@ -63,8 +63,8 @@
                      </li>
 
                      <li class="nav-item">
-                         <a class="nav-link world" href="{{ route('home.pages.cidade.index', "brasil") }}">Brasil <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
+                         <a class="nav-link world" href="{{ route('home.pages.cidade.index', 'brasil') }}">Brasil <i
+                                 class="fa fa-angle-down" aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <ul class="filter-list">
@@ -101,8 +101,8 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link sport" href="{{ route('home.pages.cidade.index', "esporte") }}">Esporte <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
+                         <a class="nav-link sport" href="{{ route('home.pages.cidade.index', 'esporte') }}">Esporte <i
+                                 class="fa fa-angle-down" aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <ul class="filter-list">
@@ -139,8 +139,8 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link tech" href="{{ route('home.pages.cidade.index', "maranhao") }}">Maranhão <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
+                         <a class="nav-link tech" href="{{ route('home.pages.cidade.index', 'maranhao') }}">Maranhão
+                             <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <div class="row">
@@ -213,6 +213,9 @@
                                  </li>
                              @endforeach
                          </ul>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="{{ route('home.pages.app.index') }}">App</a>
                      </li>
                      <li class="nav-item">
                          <a class="nav-link fashion" href="{{ route('home.pages.denuncia.create') }}">Denuncie</a>

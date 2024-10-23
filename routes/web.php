@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CategoriaClassificadosController;
 use App\Http\Controllers\CategoriaController;
@@ -49,6 +50,9 @@ Route::get('cidade/{slug}', [CidadeController::class, 'index'])->name('home.page
 Route::get('denuncia/', [DenunciaController::class, 'create'])->name('home.pages.denuncia.create');
 Route::post('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
 
+//app
+Route::get('app/', [AppController::class, 'index'])->name('home.pages.app.index');
+
 //assinatura
 Route::post('assinatura/store', [DenunciaController::class, 'pagamento'])->name('home.pages.pagamento.store');
 
@@ -76,7 +80,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/categorias/edit/{id}', [CategoriaController::class, 'edit'])->name('admin.pages.categorias.edit')->middleware(['auth']);;
     Route::post('/admin/categoria/update', [CategoriaController::class, 'update'])->name('admin.pages.categoria.update');
     Route::get('admin/categoria/delete/{id}', [CategoriaController::class, 'destroy'])->name('admin.pages.categoria.destroy')->middleware(['auth']);
-    
+
     // informativo
     Route::get('/admin/info', [InformativoController::class, 'index'])->name('admin.pages.info.index');
     Route::post('/admin/info/update', [InformativoController::class, 'update'])->name('admin.pages.info.update');

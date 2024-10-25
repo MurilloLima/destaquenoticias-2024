@@ -31,7 +31,7 @@ class DenunciaController extends Controller
     public function pagamento()
     {
         $cat = Categoria::orderBy('created_at', 'desc')->get();
-        return view('home.pages.pagamento.index', compact('cat'));
+        return view('home.pages.app.index', compact('cat'));
     }
 
     /**

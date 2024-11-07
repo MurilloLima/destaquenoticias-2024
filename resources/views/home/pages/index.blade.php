@@ -23,7 +23,7 @@
                                     <ul class="post-tags">
                                         <li>
                                             <i class="lnr lnr-user"></i>
-                                            <a href="#">Renata da Silva</a>
+                                            <a href="#">Administrador</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -44,7 +44,7 @@
                             class="category category-world">{{ $item->categoria->name }}</a>
                         <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</h2>
                         <ul class="post-tags">
-                            <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
+                            <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li>
                             {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
                         </ul>
                     </div>
@@ -86,7 +86,7 @@
                                         <ul class="post-tags">
                                             <li>
                                                 <i class="lnr lnr-user"></i>
-                                                <a href="#">Renata da Silva</a>
+                                                <a href="#">Administrador</a>
                                             </li>
                                             </li>
                                             {{-- <li><i class="lnr lnr-eye"></i>872 Views</li> --}}
@@ -125,7 +125,7 @@
                                                     href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                             </h2>
                                             <ul class="post-tags">
-                                                <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
+                                                <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li>
                                             </ul>
                                         </div>
                                     </div>

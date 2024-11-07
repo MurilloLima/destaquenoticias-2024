@@ -88,7 +88,7 @@
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
-                                                         <a href="#">Renata da Silva</a>
+                                                         <a href="#">Administrador</a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                                  comments</span></a></li> --}}
@@ -126,7 +126,7 @@
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
-                                                         <a href="#">Renata da Silva</a>
+                                                         <a href="#">Administrador</a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                             comments</span></a></li> --}}
@@ -159,8 +159,9 @@
                                                          href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                                  </h2>
                                                  <ul class="post-tags">
-                                                     <li><i class="lnr lnr-user"></i><a href="#">Renata
-                                                             Silva</a>
+                                                     <li><i class="lnr lnr-user"></i>
+                                                        <a href="#">Administrador
+                                                             </a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                             comments</span></a></li> --}}
@@ -192,7 +193,7 @@
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
-                                                         <a href="#">Renata da Silva</a>
+                                                         <a href="#">Administrador</a>
                                                      </li>
                                                  </ul>
                                              </div>

@@ -1,26 +1,14 @@
 @extends('home.layout.app')
 @section('title', $data->title)
 
-<meta property="og:audio" content="{{ asset('upload/noticias/') . $data->img }}" />
-<meta property="og:description" content="{{ asset('upload/noticias/') . $data->desc }}" />
-<meta property="og:determiner" content="the" />
-<meta property="og:locale" content="en_GB" />
-<meta property="og:locale:alternate" content="fr_FR" />
-<meta property="og:locale:alternate" content="es_ES" />
-<meta property="og:site_name" content="IMDb" />
-<meta property="og:video" content="{{ asset('upload/noticias/') . $data->img }}" />
-<meta property="og:site_name" content="Destaque notícias">
-<meta property="og:title" content="{{ $data->title }}">
-<meta property="og:description" content="{{ $data->desc }}">
-<meta property="og:image" itemprop="image" content="{{ asset('upload/noticias/' . $data->img) }}">
-<meta property="og:type" content="website">
-
-{{-- whatsapp --}}
-<meta property="og:site_name" content="Destaque Notícias">
-<meta property="og:title" content="{{ $data->title }}">
-<meta property="og:description" content="{{ $data->desc }}">
-<meta property="og:image" itemprop="image" content="{{ asset('upload/noticias/' . $data->img) }}">
-<meta property="og:type" content="website">
+<head>
+    <meta property="og:site_name" content="Destaque Notícias">
+    <meta property="og:title" content="{{ $data->desc }}">
+    <meta property="og:description" content="Descrição">
+    <meta property="og:image:secure_url" itemprop="image"
+        content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img }}">
+    <meta property="og:type" content="website">
+</head>
 
 @section('content')
     <section id="content-section" style="transform: none;">

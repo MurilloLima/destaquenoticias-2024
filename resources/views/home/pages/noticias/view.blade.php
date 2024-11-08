@@ -1,17 +1,9 @@
 @extends('home.layout.app')
 @section('title', $data->title)
 
-<title>{{ $data->title }}</title>
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{{ $data->title }}" />
-<meta property="og:description" content="{{ $data->desc }}" />
-<meta property="og:image" content="https://destaquenoticias.com/upload/noticias/{{ $data->img }}" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:locale" content="pt_BR" />
-<meta property="og:url" content="https://destaquenoticias.com/upload/noticias/{{ $data->img }}" />
-<meta property="og:site_name" content="Destaque notícias" />
-
+<head>
+    <meta property="og:image" content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img }}">
+</head>
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">

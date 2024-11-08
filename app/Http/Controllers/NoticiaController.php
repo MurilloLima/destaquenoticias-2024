@@ -42,10 +42,16 @@ class NoticiaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => [
+                'required',
+                'image',
+                'mimes:jpg,png,jpeg,gif,svg',
+                'max:2048'
+            ],
             'title' => 'required',
             'desc' => 'required',
             'content' => 'required',
@@ -75,8 +81,8 @@ class NoticiaController extends Controller
         $aletoria = Noticia::inRandomOrder()->limit(5)->get();
         $outras = Noticia::offset(5)->limit(2)->get();
         $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
-        $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
-        $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
+        $maranhao = Noticia::where('cat_id', '=', 2)->limit(4)->get();
         $classificados = Classificado::latest()->get();
         $cidades = Categoria::latest()->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();

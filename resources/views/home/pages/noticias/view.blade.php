@@ -1,9 +1,6 @@
 @extends('home.layout.app')
 @section('title', $data->title)
 
-<head>
-    <meta property="og:image" content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img }}">
-</head>
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
@@ -27,8 +24,16 @@
                         <div class="share-post-box">
                             <ul class="share-box">
                                 <li>
-                                    <a class="facebook" href="#"><i class="fa fa-facebook"></i><span>
+                                    <a class="facebook"
+                                        href="https://www.facebook.com/sharer/sharer.php?u={{ route('home.pages.noticias.view', [$data->slug]) }}"><i
+                                            class="fa fa-facebook"></i><span>
                                             Facebook</span></a>
+                                </li>
+                                <li>
+                                    <a class="instagram"
+                                        href="https://www.instagram.com/sharer/sharer.php?u={{ route('home.pages.noticias.view', [$data->slug]) }}"><i
+                                            class="fa fa-instragram"></i><span>
+                                            Instagram</span></a>
                                 </li>
                                 <li>
                                     <a class="twitter"

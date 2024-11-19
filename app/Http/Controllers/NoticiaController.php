@@ -8,6 +8,8 @@ use App\Models\Noticia;
 use App\Models\Publicidade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Intervention\Image\ImageManager;
 
 class NoticiaController extends Controller
 {
@@ -57,7 +59,10 @@ class NoticiaController extends Controller
             'content' => 'required',
         ]);
 
+        
+
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            // resize to 300 x 200 pixel
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('upload/noticias'), $imageName);
             $this->noticia->img = $imageName;

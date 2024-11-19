@@ -135,7 +135,7 @@ class NoticiaController extends Controller
             $noticia->cat_id = $request->get('cat_id');
             $noticia->title = $request->get('title');
             $noticia->desc = $request->get('desc');
-            $noticia->slug = $request->get('title');
+            $noticia->slug = Str::slug($request->title, '-');
             $noticia->content = $request->get('content');
             $noticia->update();
             return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');

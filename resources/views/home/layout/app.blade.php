@@ -26,12 +26,12 @@
     <script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/57/8b/util.js"></script>
     <title>Destaque notícias - @yield('title')</title>
     {{-- matas tags wt --}}
-    <meta property="og:site_name" content="Destaque notícias">
+    {{-- <meta property="og:site_name" content="Destaque notícias">
     <meta property="og:title" content="{{ $data->title ?? '' }}">
     <meta property="og:description" content="{{ $data->desc ?? '' }}">
     <meta property="og:image" itemprop="image"
         content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img ?? ''}}">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website"> --}}
 </head>
 
 <body>

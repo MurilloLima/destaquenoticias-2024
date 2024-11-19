@@ -23,28 +23,15 @@
                         </ul>
                         <div class="share-post-box">
                             <ul class="share-box">
-                                <li>
-                                    <a class="facebook"
+                                <li><a class="facebook"
                                         href="https://www.facebook.com/sharer/sharer.php?u={{ route('home.pages.noticias.view', [$data->slug]) }}"><i
-                                            class="fa fa-facebook"></i><span>
-                                            Facebook</span></a>
-                                </li>
-                                <li>
-                                    <a class="instagram"
-                                        href="https://www.instagram.com/sharer/sharer.php?u={{ route('home.pages.noticias.view', [$data->slug]) }}"><i
-                                            class="fa fa-instragram"></i><span>
-                                            Instagram</span></a>
-                                </li>
-                                <li>
-                                    <a class="twitter"
+                                            class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                <li><a class="twitter"
                                         href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"><i
-                                            class="fa fa-whatsapp" aria-hidden="true">
-                                        </i>
-                                        <span>Compartilhar whatsapp</span>
-                                    </a>
-                                </li>
-                                <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            class="fa fa-whatsapp"></i><span>
+                                            Whatsapp</span></a></li>
+                                <li><a class="google" href="single-post.html#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a class="linkedin" href="single-post.html#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li>
                             </ul>
                         </div>

@@ -9,7 +9,7 @@
 
             <div class="flexslider">
                 <ul class="slides">
-                    @foreach ($noticiaslider as $item)
+                    @foreach ($noticias3 as $item)
                         <li>
                             <div class="news-post large-image-post">
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 511px; height: 511px;"

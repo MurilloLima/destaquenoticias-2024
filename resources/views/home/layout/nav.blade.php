@@ -17,7 +17,7 @@
                              <a href="about.html">Sobre</a>
                          </li>
                          <li>
-                             <a href="">Contatos</a>
+                             <a href="">Fale conosco</a>
                          </li>
                          <li>
                              <a href="" data-toggle="modal" data-target="#modalLogin">Login</a>

@@ -14,10 +14,10 @@
                              </span>
                          </li>
                          <li>
-                             <a href="about.html">Sobre</a>
+                             <a href="">Sobre</a>
                          </li>
                          <li>
-                             <a href="">Fale conosco</a>
+                             <a href="{{ route('home.pages.contatos.index') }}">Fale conosco</a>
                          </li>
                          <li>
                              <a href="" data-toggle="modal" data-target="#modalLogin">Login</a>

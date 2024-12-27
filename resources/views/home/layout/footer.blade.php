@@ -110,7 +110,7 @@
                             Política de Privacidade
                         </a>
                     </li>
-                    <li><a href="#">Fale conosco</a></li>
+                    <li><a href="{{ route('home.pages.contatos.index') }}">Fale conosco</a></li>
                 </ul>
                 <p>&copy; Copyright Destaque Noticias - {{ date('Y') }}<a href="#" class="go-top"><i
                             class="fa fa-caret-up" aria-hidden="true"></i></a></p>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\Home\ContatoController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CategoriaClassificadosController;
 use App\Http\Controllers\CategoriaController;
@@ -29,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 // home
 Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 Route::post('newsletter/', [HomeController::class, 'newsletter'])->name('home.newsletter');
-Route::get('contatos/', [HomeController::class, 'index'])->name('home.pages.contatos.index');
+Route::get('contatos/', [ContatoController::class, 'index'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contatos.store');
 //noticias
 Route::get('categoria/{slug}', [NoticiaController::class, 'index'])->name('home.pages.noticias.index');

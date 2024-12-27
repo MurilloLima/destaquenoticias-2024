@@ -94,7 +94,7 @@
                                 name="CW2" scrolling="no" width="290" height="318" frameborder="0"
                                 style=""></iframe> --}}
 
-                                tempo
+                            tempo
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                     <li><a href="?">Home</a></li>
                     <li><a href="">Sobre</a></li>
                     <li>
-                        <a href="privacy-policy.html">
+                        <a href="{{ route('home.pages.privacy.index') }}">
                             Política de Privacidade
                         </a>
                     </li>

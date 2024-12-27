@@ -67,7 +67,7 @@ Route::post('register/user/', [RegisterController::class, 'store'])->name('home.
 Route::get('login/', [HomeController::class, 'login'])->name('home.pages.login.index');
 
 //privacy
-Route::get('privacy', [HomeController::class, 'privacy'])->name('home.pages.privacy');
+Route::get('privacy', [HomeController::class, 'privacy'])->name('home.pages.privacy.index');
 
 Route::get('/dashboard', function () {
     return view('admin.pages.index');

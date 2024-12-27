@@ -9,27 +9,9 @@
                 <div class="col-lg-8">
                     <div class="contact-form-box">
                         <div class="title-section">
-                            <h1><span>Fale conosco</span></h1>
+                            <h1><span>Política de Privacidade</span></h1>
                         </div>
-                        <form id="contact-form" action="" method="POST">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="name">
-                                        Seu nome*</label>
-                                    <input id="name" name="name" type="text">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="mail">Seu e-mail*</label>
-                                    <input id="mail" name="mail" type="text">
-                                </div>
-                            </div>
-                            <label for="comment">Sua mensagem*</label>
-                            <textarea id="comment" name="comment"></textarea>
-                            <button type="submit" id="submit_contact">
-                                <i class="fa fa-paper-plane"></i> Enviar
-                            </button>
-                            <div id="msg" class="alert"></div>
-                        </form>
+
                     </div>
                 </div>
 

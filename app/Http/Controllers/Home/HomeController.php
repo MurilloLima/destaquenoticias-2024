@@ -27,7 +27,7 @@ class HomeController extends Controller
         $cidades = Categoria::latest()->get();
         $classificados = Classificado::latest()->get();
         $noticias3 = Noticia::orderBy('id', 'DESC')->take(3)->get();
-        $noticias6 = Noticia::orderBy('id','DESC')->skip(3)->take(6)->get();
+        $noticias6 = Noticia::orderBy('id', 'DESC')->skip(3)->take(6)->get();
         // dd($noticias3);
         $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
         $esporte = Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
@@ -38,15 +38,23 @@ class HomeController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->latest()->take(4)->get();
-        return view('home.pages.index', compact('cidades','noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.index', compact('cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function sobre()
     {
-        //
+        return view('');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function politica()
+    {
+        return view('');
     }
 
     /**
@@ -128,6 +136,6 @@ class HomeController extends Controller
         $maranhao = Noticia::where('cat_id', '=', 2)->limit(4)->get();
         //clima
 
-        return view('home.pages.privacy', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.privacy.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 }

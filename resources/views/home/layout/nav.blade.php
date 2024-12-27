@@ -13,9 +13,9 @@
                                  {{ date('d/m/Y') }}
                              </span>
                          </li>
-                         <li>
-                             <a href="">Sobre</a>
-                         </li>
+                         {{-- <li>
+                             <a href="{{ route('home.pages.sobre.index') }}">Sobre</a>
+                         </li> --}}
                          <li>
                              <a href="{{ route('home.pages.contatos.index') }}">Fale conosco</a>
                          </li>

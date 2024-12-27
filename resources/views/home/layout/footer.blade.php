@@ -103,8 +103,8 @@
 
             <div class="down-footer">
                 <ul class="list-footer">
-                    <li><a href="?">Home</a></li>
-                    <li><a href="">Sobre</a></li>
+                    <li><a href="/">Home</a></li>
+                    {{-- <li><a href="{{ route('home.pages.sobre.index') }}">Sobre</a></li> --}}
                     <li>
                         <a href="{{ route('home.pages.privacy.index') }}">
                             Política de Privacidade

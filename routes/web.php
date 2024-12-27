@@ -69,6 +69,9 @@ Route::get('login/', [HomeController::class, 'login'])->name('home.pages.login.i
 //privacy
 Route::get('privacy', [HomeController::class, 'privacy'])->name('home.pages.privacy.index');
 
+//sobre
+Route::get('sobre', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
+
 Route::get('/dashboard', function () {
     return view('admin.pages.index');
 })->middleware(['auth', 'verified'])->name('dashboard');

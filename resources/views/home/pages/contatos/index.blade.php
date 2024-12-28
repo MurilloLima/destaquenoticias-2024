@@ -10,6 +10,7 @@
                     <div class="contact-form-box">
                         <div class="title-section">
                             <h1><span>Fale conosco</span></h1>
+                            <p>E-mail: contato@destaquenoticias.com</p>
                         </div>
                         <form id="contact-form" action="" method="POST">
                             <div class="row">

@@ -37,8 +37,8 @@
                                             class="fa fa-whatsapp"></i><span>
                                             Whatsapp</span></a></li>
                                 <li><a class="google" href="single-post.html#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="linkedin" href="single-post.html#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li>
+                                {{-- <li><a class="linkedin" href="single-post.html#"><i class="fa fa-linkedin"></i></a></li> --}}
+                                {{-- <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li> --}}
                             </ul>
                         </div>
                         <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""

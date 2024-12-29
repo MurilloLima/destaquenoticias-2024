@@ -16,7 +16,7 @@
 
                     <!-- single-post -->
                     <div class="single-post">
-                        <h1>{{ $data->title }}</h1>
+                        <h1 style="font-size: 24px">{{ $data->title }}</h1>
                         <ul class="post-tags">
                             <li><i class="lnr lnr-user"></i><a href="single-post.html#">Administrador</a></li>
                             {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>20 comments</span></a></li> --}}
@@ -36,7 +36,7 @@
                                         href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"><i
                                             class="fa fa-whatsapp"></i><span>
                                             Whatsapp</span></a></li>
-                                <li><a class="google" href="single-post.html#"><i class="fa fa-google-plus"></i></a></li>
+                                {{-- <li><a class="google" href="single-post.html#"><i class="fa fa-google-plus"></i></a></li> --}}
                                 {{-- <li><a class="linkedin" href="single-post.html#"><i class="fa fa-linkedin"></i></a></li> --}}
                                 {{-- <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li> --}}
                             </ul>

@@ -91,7 +91,7 @@ h1 {
   color: #212121;
   font-size: 17px;
   font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
   margin: 0 0 20px;
 }

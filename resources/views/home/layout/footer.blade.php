@@ -120,7 +120,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <a href="" data-toggle="modal" data-target="#modalExemplo" class="back-to-top">
+    <a href="{{ route('home.pages.contatos.index') }}" data-toggle="modal" data-target="#modalExemplo" class="back-to-top">
         {{-- divulgar --}}
         <img src="{{ asset('home/images/avatar.png') }}" style="width: 70px" class="divulgar" alt="">
     </a>

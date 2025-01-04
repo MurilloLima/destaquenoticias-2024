@@ -7,6 +7,7 @@
 <meta property="og:image" itemprop="image"
     content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img ?? '' }}">
 <meta property="og:type" content="website">
+
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
@@ -31,48 +32,41 @@
                             <a href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"
                                 id="whatsapp-share-btt" rel="nofollow" target="_blank" class="whatsapp-share-button"></a>
                         </div>
-                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
-                            style="width: 100%; height: 450px;;">
-                        <div class="text-boxes">
-                            {!! $data->content !!}
+
+                        <!-- Advertisement -->
+                        <div class="advertisement">
+                            <a href="single-post.html#">
+                                <img src="{{ asset('home/upload/addsense/620x80grey.jpg') }}" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <!-- End single-post -->
+                        <!-- End Advertisement -->
 
-                    <!-- Advertisement -->
-                    <div class="advertisement">
-                        <a href="single-post.html#">
-                            <img src="{{ asset('home/upload/addsense/620x80grey.jpg') }}" alt="">
-                        </a>
                     </div>
-                    <!-- End Advertisement -->
 
+                    @include('home.layout.sidebar')
                 </div>
 
-                @include('home.layout.sidebar')
-            </div>
+                <!-- End Advertisement -->
 
-            <!-- End Advertisement -->
-
-            <!-- more from news box -->
-            <div class="more-from-news">
-                <h1>APOIO</h1>
-                <div class="row">
-                    @foreach ($publicidade as $item)
-                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="news-post thumb-post">
-                                <div class="post-image">
-                                    <a href="#">
-                                        <img src="{{ asset('upload/publicidade/' . $item->img) }}" alt=""
-                                            style="width: 100%; height: 100px;">
-                                    </a>
+                <!-- more from news box -->
+                <div class="more-from-news">
+                    <h1>APOIO</h1>
+                    <div class="row">
+                        @foreach ($publicidade as $item)
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="news-post thumb-post">
+                                    <div class="post-image">
+                                        <a href="#">
+                                            <img src="{{ asset('upload/publicidade/' . $item->img) }}" alt=""
+                                                style="width: 100%; height: 100px;">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
+                <!-- end more from news box -->
             </div>
-            <!-- end more from news box -->
-        </div>
     </section>
 @endsection

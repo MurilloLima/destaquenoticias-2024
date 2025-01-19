@@ -10,7 +10,6 @@
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
-
             <div class="row" style="transform: none;">
                 <div class="col-lg-8">
 
@@ -27,7 +26,7 @@
                                 <i class="lnr lnr-eye"></i>
                                 {{-- visualizacoes --}}
                                 {{ count($total) }}
-                                visualizações
+                                Views
                             </li>
                         </ul>
                         <div class="share-post-box" style="text-align: center;">

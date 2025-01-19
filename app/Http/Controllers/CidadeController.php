@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Classificado;
 use App\Models\Noticia;
 use App\Models\Publicidade;
+use App\Models\view;
 use Illuminate\Http\Request;
 
 class CidadeController extends Controller
@@ -16,7 +17,7 @@ class CidadeController extends Controller
     public function index($categoria)
     {
         $slug = Categoria::where('slug', '=', $categoria)->first();
-        $data = Noticia::where('cat_id', '=', $slug->id)->get();
+        $data = Noticia::where('cat_id', '=', $slug->id)->paginate();
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
         $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
@@ -28,7 +29,8 @@ class CidadeController extends Controller
         $categorias = Categoria::all();
         $publicidade = Publicidade::all();
         $totalregistros = $data->count();
-        return view('home.pages.noticias.index', compact('slug', 'data', 'random', 'categorias', 'publicidade', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque', 'totalregistros'));
+        $total = view::where('noticia_id', '=', $slug->id)->get();
+        return view('home.pages.noticias.index', compact('slug', 'data', 'random', 'total', 'categorias', 'publicidade', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque', 'totalregistros'));
     }
 
     /**

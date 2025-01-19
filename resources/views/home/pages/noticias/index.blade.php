@@ -14,7 +14,7 @@
                         <div class="title-section">
                             <h1><span>{{ $slug->name }} ({{ $totalregistros }})</span></h1>
                         </div>
-
+{{--
                         <ul class="author-list">
 
                             @foreach ($data as $item)
@@ -61,6 +61,26 @@
                                 </li>
                             @endforeach
 
+                        </ul> --}}
+                        <ul class="small-posts">
+                            @foreach ($data as $item)
+                                <li>
+                                    <a href="single-post.html">
+                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
+                                    </a>
+                                    <div class="post-cont">
+                                        <h2>
+                                            <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
+                                                {{ $item->title }}
+                                            </a>
+                                        </h2>
+
+                                        <ul class="post-tags">
+                                            <li><i class="lnr lnr-user"></i>by <a href="home6.html#">Author</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- End Posts-block -->

@@ -19,7 +19,7 @@
                             <div class="col-sm-4">
                                 <div class="post-image">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
-                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
+                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" style="height: 200px;" alt="">
                                     </a>
                                     <a class="category category-travel" href="#">{{ $slug->name }}</a>
                                 </div>
@@ -31,7 +31,7 @@
                                 <ul class="post-tags">
                                     {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}
                                     {{-- <li><a href="#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
-                                    <li><i class="lnr lnr-eye"></i>872 Visualizaçõesli>
+                                    <li><i class="lnr lnr-eye"></i>{{ count($item->views) }} Visualizaçõe</li>
                                 </ul>
                                 <p>{{ $item->desc }}</p>
                             </div>

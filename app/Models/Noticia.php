@@ -16,12 +16,17 @@ class Noticia extends Model
         'content'
     ];
 
-  
+
 
     public function categoria()
     {
         return $this->belongsTo(Categoria::class, 'cat_id', 'id');
     }
+
+    // public function views()
+    // {
+    //     return $this->hasMany(view::class, 'noticia_id', 'id');
+    // }
 
     public function views()
     {

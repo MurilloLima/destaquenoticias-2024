@@ -25,8 +25,7 @@
                             <li>
                                 <i class="lnr lnr-eye"></i>
                                 {{-- visualizacoes --}}
-                                {{ count($total) }}
-                                Views
+                                {{ count($data->views) }} Views
                             </li>
                         </ul>
                         <div class="share-post-box" style="text-align: center;">

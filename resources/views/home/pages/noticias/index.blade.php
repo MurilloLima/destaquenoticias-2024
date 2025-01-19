@@ -15,18 +15,18 @@
 
                 <div class="news-post article-post">
                     @foreach ($data as $item)
-                        <div class="row">
+                        <div class="row" style="margin-bottom: 10px">
                             <div class="col-sm-4">
                                 <div class="post-image">
-                                    <a href="">
-                                        <img src="" alt="">
+                                    <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
+                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                     </a>
                                     <a class="category category-travel" href="#">{{ $slug->name }}</a>
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <h2>
-                                    <a href="">{{ $item->title }}</a>
+                                    <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                 </h2>
                                 <ul class="post-tags">
                                     {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}

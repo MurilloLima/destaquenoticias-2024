@@ -59,7 +59,7 @@ class NoticiaController extends Controller
             'content' => 'required',
         ]);
 
-        
+
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             // resize to 300 x 200 pixel

@@ -29,15 +29,15 @@ class HomeController extends Controller
         $noticias3 = Noticia::orderBy('id', 'DESC')->take(3)->get();
         $noticias6 = Noticia::orderBy('id', 'DESC')->skip(3)->take(6)->get();
         // dd($noticias3);
-        $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
-        $esporte = Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
+        $brasil = Noticia::where('cat_id', '=', 6)->orderBy('id', 'DESC')->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->orderBy('id', 'DESC')->limit(4)->get();
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $categorias = Categoria::all();
         $vejatambem = Noticia::inRandomOrder()->limit(10)->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
-        $maranhao = Noticia::where('cat_id', '=', 2)->latest()->take(4)->get();
+        $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->get();
         return view('home.pages.index', compact('cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
@@ -76,8 +76,8 @@ class HomeController extends Controller
         $classificados = Classificado::latest()->get();
         $noticias1 = Noticia::latest()->first();
         $noticias6 = Noticia::latest()->limit(6)->get();
-        $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
-        $esporte = Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
+        $brasil = Noticia::where('cat_id', '=', 6)->latest()->orderBy('id', 'DESC')->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->latest()->orderBy('id', 'DESC')->limit(4)->get();
         $noticiaslider = Noticia::latest()->limit(3)->get();
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $categorias = Categoria::all();

@@ -6,88 +6,49 @@
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
 
-            <div class="row" style="transform: none;">
-                <div class="col-lg-8">
-
-                    <!-- Posts-block -->
-                    <div class="posts-block">
-                        <div class="title-section">
-                            <h1><span>{{ $slug->name }} ({{ $totalregistros }})</span></h1>
-                        </div>
-{{--
-                        <ul class="author-list">
-
-                            @foreach ($data as $item)
-                                <li>
-                                    <div class="autor-box">
-
-                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" alt=""
-                                            style="width: 100px; height: 100px;">
-
-                                        <div class="autor-content">
-
-                                            <div class="autor-title">
-                                                <h1>
-                                                    <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
-                                                        {{ $item->title }}
-                                                    </a>
-                                                </h1>
-                                                <ul class="autor-social">
-                                                    <li><a href="author-list.html#" class="facebook"><i
-                                                                class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="author-list.html#" class="google"><i
-                                                                class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="author-list.html#" class="twitter"><i
-                                                                class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="author-list.html#" class="youtube"><i
-                                                                class="fa fa-youtube"></i></a></li>
-                                                    <li><a href="author-list.html#" class="instagram"><i
-                                                                class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="author-list.html#" class="linkedin"><i
-                                                                class="fa fa-linkedin"></i></a></li>
-                                                    <li><a href="author-list.html#" class="dribble"><i
-                                                                class="fa fa-dribbble"></i></a></li>
-                                                </ul>
-                                            </div>
-
-                                            <p>
-                                                {{ $item->desc }}
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-
-                                </li>
-                            @endforeach
-
-                        </ul> --}}
-                        <ul class="small-posts">
-                            @foreach ($data as $item)
-                                <li>
-                                    <a href="single-post.html">
-                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
-                                    </a>
-                                    <div class="post-cont">
-                                        <h2>
-                                            <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
-                                                {{ $item->title }}
-                                            </a>
-                                        </h2>
-
-                                        <ul class="post-tags">
-                                            <li><i class="lnr lnr-user"></i>by <a href="home6.html#">Author</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <!-- End Posts-block -->
-
+            <div class="posts-block articles-box">
+                <div class="title-section">
+                    <h1>
+                        {{ $slug->name }}
+                    </h1>
                 </div>
 
-                @include('home.layout.sidebar')
+                <div class="news-post article-post">
+                    @foreach ($data as $item)
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="post-image">
+                                    <a href="">
+                                        <img src="" alt="">
+                                    </a>
+                                    <a class="category category-travel" href="#">{{ $slug->name }}</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h2>
+                                    <a href="">{{ $item->title }}</a>
+                                </h2>
+                                <ul class="post-tags">
+                                    {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}
+                                    {{-- <li><a href="#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
+                                    <li><i class="lnr lnr-eye"></i>872 Visualizaçõesli>
+                                </ul>
+                                <p>{{ $item->desc }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <ul class="pagination-list">
+                    <li><a href="index.html#">Prev</a></li>
+                    <li><a href="index.html#" class="active">1</a></li>
+                    <li><a href="index.html#">2</a></li>
+                    <li><a href="index.html#">3</a></li>
+                    <li><a href="index.html#">...</a></li>
+                    <li><a href="index.html#">6</a></li>
+                    <li><a href="index.html#">Next</a></li>
+                </ul>
+
             </div>
 
             <!-- End Advertisement -->

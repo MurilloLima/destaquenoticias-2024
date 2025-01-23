@@ -23,13 +23,13 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->get();
+        $noticias = Noticia::orderBy('id', 'DESC')->paginate(3);
         return view('admin.pages.noticias.index', compact('noticias'));
     }
 
     public function categoria($slug)
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->get();
+        $noticias = Noticia::orderBy('id', 'DESC')->paginate(15);
         return view('admin.pages.noticias.index', compact('noticias'));
     }
     /**

@@ -19,7 +19,8 @@
                             <div class="col-sm-4">
                                 <div class="post-image">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
-                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" style="height: 200px;" alt="">
+                                        <img src="{{ asset('upload/noticias/' . $item->img) }}" style="height: 200px;"
+                                            alt="">
                                     </a>
                                     <a class="category category-travel" href="#">{{ $slug->name }}</a>
                                 </div>
@@ -40,13 +41,14 @@
                 </div>
 
                 <ul class="pagination-list">
-                    <li><a href="index.html#">Prev</a></li>
+                    {{ $data->links() }}
+                    {{-- <li><a href="index.html#">Prev</a></li>
                     <li><a href="index.html#" class="active">1</a></li>
                     <li><a href="index.html#">2</a></li>
                     <li><a href="index.html#">3</a></li>
                     <li><a href="index.html#">...</a></li>
                     <li><a href="index.html#">6</a></li>
-                    <li><a href="index.html#">Next</a></li>
+                    <li><a href="index.html#">Next</a></li> --}}
                 </ul>
 
             </div>

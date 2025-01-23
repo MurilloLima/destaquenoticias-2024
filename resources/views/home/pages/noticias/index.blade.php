@@ -38,21 +38,10 @@
                             </div>
                         </div>
                     @endforeach
-                </div>
-
-                <ul class="pagination-list">
-                    <div class="d-flex custom-pagination">
-                        {{ $data->links('pagination::bootstrap-5'); }}
+                    <div class="mt-3">
+                        {{ $data->links() }}
                     </div>
-                    {{-- <li><a href="index.html#">Prev</a></li>
-                    <li><a href="index.html#" class="active">1</a></li>
-                    <li><a href="index.html#">2</a></li>
-                    <li><a href="index.html#">3</a></li>
-                    <li><a href="index.html#">...</a></li>
-                    <li><a href="index.html#">6</a></li>
-                    <li><a href="index.html#">Next</a></li> --}}
-                </ul>
-
+                </div>
             </div>
 
             <!-- End Advertisement -->

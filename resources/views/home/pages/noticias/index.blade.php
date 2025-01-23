@@ -41,7 +41,9 @@
                 </div>
 
                 <ul class="pagination-list">
-                    {{ $data->links() }}
+                    <div class="d-flex custom-pagination">
+                        {{ $data->links('pagination::bootstrap-5'); }}
+                    </div>
                     {{-- <li><a href="index.html#">Prev</a></li>
                     <li><a href="index.html#" class="active">1</a></li>
                     <li><a href="index.html#">2</a></li>

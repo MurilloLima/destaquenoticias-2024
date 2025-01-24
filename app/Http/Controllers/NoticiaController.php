@@ -23,7 +23,7 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->paginate(3);
+        $noticias = Noticia::orderBy('id', 'DESC')->paginate(20);
         return view('admin.pages.noticias.index', compact('noticias'));
     }
 

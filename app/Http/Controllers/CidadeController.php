@@ -17,7 +17,7 @@ class CidadeController extends Controller
     public function index($categoria)
     {
         $slug = Categoria::where('slug', '=', $categoria)->first();
-        $data = Noticia::where('cat_id', '=', $slug->id)->orderBy('id', 'DESC')->paginate(1);
+        $data = Noticia::where('cat_id', '=', $slug->id)->orderBy('id', 'DESC')->simplePaginate(30);
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
         $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();

@@ -25,7 +25,6 @@
                     </li>
                 @endif
             </ul>
-            <br>
         </div>
 
         <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between">
@@ -89,6 +88,7 @@
                         </li>
                     @endif
                 </ul>
+
             </div>
         </div>
     </nav>

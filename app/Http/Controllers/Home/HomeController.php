@@ -133,7 +133,7 @@ class HomeController extends Controller
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
-        $maranhao = Noticia::where('cat_id', '=', 2)->limit(4)->get();
+        $maranhao = Noticia::latest('cat_id', '=', 2)->limit(4)->get();
         //clima
 
         return view('home.pages.privacy.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));

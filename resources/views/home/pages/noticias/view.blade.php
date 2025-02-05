@@ -18,8 +18,11 @@
                         <h1>{{ $data->title }}</h1>
                         <ul class="post-tags">
                             <li>
-                                <i class="lnr lnr-user"></i>
-                                <a href="#">Administrador</a>
+                                {{-- <i class="lnr lnr-user"></i> --}}
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <a href="#">
+                                    {{ $data->created_at }}
+                                </a>
                             </li>
                             {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>20 comments</span></a></li> --}}
                             <li>

@@ -42,8 +42,10 @@
                                                     href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                             </h2>
                                             <ul class="post-tags">
-                                                <li><i class="lnr lnr-user"></i><a href="index.html#">Renata da
-                                                        Silva</a></li>
+                                                <li>
+                                                    {{-- <i class="lnr lnr-user"></i><a href="index.html#">Renata da
+                                                        Silva</a> --}}
+                                                </li>
                                             </ul>
                                         </div>
                                     </li>
@@ -69,7 +71,7 @@
                                         href="{{ route('home.pages.noticias.view', [$destaque->slug]) }}">{{ $destaque->title }}</a>
                                 </h2>
                                 <ul class="post-tags">
-                                    <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
+                                    {{-- <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li> --}}
                                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a> --}}
                                     </li>
                                 </ul>
@@ -120,7 +122,8 @@
     </footer>
 
     <!-- Back to Top -->
-    <a href="{{ route('home.pages.contatos.index') }}" data-toggle="modal" data-target="#modalExemplo" class="back-to-top">
+    <a href="{{ route('home.pages.contatos.index') }}" data-toggle="modal" data-target="#modalExemplo"
+        class="back-to-top">
         {{-- divulgar --}}
         <img src="{{ asset('home/images/avatar.png') }}" style="width: 70px" class="divulgar" alt="">
     </a>

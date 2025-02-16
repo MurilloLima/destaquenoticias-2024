@@ -195,7 +195,7 @@
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Notícias
-                            <span class="right badge badge-danger">{{ count($totalnews) }}</span>
+                            {{-- <span class="right badge badge-danger">{{ count($totalnews) }}</span> --}}
                         </p>
                     </a>
                 </li>

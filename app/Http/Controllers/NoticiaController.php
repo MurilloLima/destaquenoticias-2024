@@ -24,7 +24,8 @@ class NoticiaController extends Controller
     public function index()
     {
         $noticias = Noticia::orderBy('id', 'DESC')->paginate(20);
-        return view('admin.pages.noticias.index', compact('noticias'));
+        $totalnews = Noticia::all();
+        return view('admin.pages.noticias.index', compact(['noticias', 'totalnews']));
     }
 
     public function categoria($slug)

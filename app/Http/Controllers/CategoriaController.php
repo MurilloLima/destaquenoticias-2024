@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -18,8 +19,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
+        $totalnews = Noticia::all();
         $categoria = Categoria::latest()->get();
-        return view('admin.pages.categoria.index', compact('categoria'));
+        return view('admin.pages.categoria.index', compact(['categoria', 'totalnews']));
     }
 
     /**
@@ -30,7 +32,7 @@ class CategoriaController extends Controller
         return view('admin.pages.categoria.create');
     }
 
-   /**
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)

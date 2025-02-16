@@ -21,8 +21,9 @@ class DenunciaController extends Controller
      */
     public function index()
     {
+        $totalnews = Noticia::all();
         $data = Denuncia::latest()->get();
-        return view('admin.pages.denuncia.index', compact('data'));
+        return view('admin.pages.denuncia.index', compact(['data','totalnews']));
     }
 
     /**

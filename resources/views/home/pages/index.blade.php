@@ -168,7 +168,7 @@
                                         <ul class="post-tags">
                                             <li><i class="lnr lnr-user"></i><a href="#">Renata da silva</a></li>
 
-                                            <li><i class="lnr lnr-eye"></i>872 Visualizações</li>
+                                            <li><i class="lnr lnr-eye"></i>{{ count($item->views) }} Views</li>
                                         </ul>
                                         <p>{{ $item->desc }}</p>
                                     </div>

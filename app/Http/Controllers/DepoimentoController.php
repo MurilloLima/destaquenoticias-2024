@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Depoimento;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
 class DepoimentoController extends Controller
@@ -17,8 +18,9 @@ class DepoimentoController extends Controller
      */
     public function index()
     {
+        $totalnews = Noticia::all();
         $data = Depoimento::orderBy('id', 'DESC')->get();
-        return view('admin.pages.depoimentos.index', compact('data'));
+        return view('admin.pages.depoimentos.index', compact(['data','totalnews']));
     }
 
     /**

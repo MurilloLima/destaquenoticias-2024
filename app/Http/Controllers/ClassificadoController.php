@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CategoriaClassificados;
 use App\Models\Classificado;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
 class ClassificadoController extends Controller
@@ -18,8 +19,9 @@ class ClassificadoController extends Controller
      */
     public function index()
     {
+        $totalnews = Noticia::all();
         $data = Classificado::latest()->get();
-        return view('admin.pages.cliente.classificados.index', compact('data'));
+        return view('admin.pages.cliente.classificados.index', compact(['data','totalnews']));
     }
 
     /**

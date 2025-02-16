@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Noticia;
 use App\Models\Publicidade;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,9 @@ class PublicidadeController extends Controller
      */
     public function index()
     {
+        $totalnews = Noticia::all();
         $data = Publicidade::orderby('id', 'DESC')->get();
-        return view('admin.pages.publicidade.index', compact('data'));
+        return view('admin.pages.publicidade.index', compact(['data','totalnews']));
     }
 
     /**

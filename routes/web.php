@@ -15,6 +15,7 @@ use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicidadeController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Noticia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,7 +74,8 @@ Route::get('privacy', [HomeController::class, 'privacy'])->name('home.pages.priv
 Route::get('sobre', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
 
 Route::get('/dashboard', function () {
-    return view('admin.pages.index');
+    $totalnews = Noticia::all();
+    return view('admin.pages.index',  compact('totalnews'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

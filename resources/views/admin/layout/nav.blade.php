@@ -173,7 +173,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-               
+
                 <li class="nav-item">
                     <a href="{{ route('admin.pages.categoria.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-bars"></i>
@@ -195,6 +195,7 @@
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Notícias
+                            <span class="right badge badge-danger">{{ count($totalnews) }}</span>
                         </p>
                     </a>
                 </li>

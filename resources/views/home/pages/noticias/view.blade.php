@@ -21,7 +21,7 @@
                                 {{-- <i class="lnr lnr-user"></i> --}}
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <a href="#">
-                                    {{ $data->created_at }}
+                                    {{ date( 'd/m/Y' , strtotime($data->created_at))}}
                                 </a>
                             </li>
                             {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>20 comments</span></a></li> --}}

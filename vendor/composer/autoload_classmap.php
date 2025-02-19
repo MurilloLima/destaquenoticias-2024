@@ -38,6 +38,7 @@ return array(
     'App\\Http\\Controllers\\DashboardController' => $baseDir . '/app/Http/Controllers/DashboardController.php',
     'App\\Http\\Controllers\\DenunciaController' => $baseDir . '/app/Http/Controllers/DenunciaController.php',
     'App\\Http\\Controllers\\DepoimentoController' => $baseDir . '/app/Http/Controllers/DepoimentoController.php',
+    'App\\Http\\Controllers\\Home\\ContatoController' => $baseDir . '/app/Http/Controllers/Home/ContatoController.php',
     'App\\Http\\Controllers\\Home\\HomeController' => $baseDir . '/app/Http/Controllers/Home/HomeController.php',
     'App\\Http\\Controllers\\InformativoController' => $baseDir . '/app/Http/Controllers/InformativoController.php',
     'App\\Http\\Controllers\\NoticiaController' => $baseDir . '/app/Http/Controllers/NoticiaController.php',

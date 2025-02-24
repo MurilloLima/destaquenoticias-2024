@@ -125,7 +125,7 @@
     <a href="{{ route('home.pages.contatos.index') }}" data-toggle="modal" data-target="#modalExemplo"
         class="back-to-top">
         {{-- divulgar --}}
-        <img src="{{ asset('home/images/avatar.png') }}" style="width: 70px" class="divulgar" alt="">
+        <img src="{{ asset('home/images/avatar.webp') }}" style="width: 70px" class="divulgar" alt="">
     </a>
     <!-- End footer -->
     <!-- Modal -->

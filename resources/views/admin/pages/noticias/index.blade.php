@@ -52,7 +52,7 @@
                                         <tr>
                                             <th style="width: 10px">#</th>
                                             <th>Título</th>
-                                            <th>Criada em</th>
+                                            <th style="width: 140px">Criada em</th>
                                             <th style="width: 70px">#</th>
                                         </tr>
                                     </thead>
@@ -61,7 +61,7 @@
                                             <tr>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->title }}</td>
-                                                <td>{{ date( 'd/m/Y' , strtotime($item->created_at))}}</td>
+                                                <td>{{ date( 'd/m/Y H:i' , strtotime($item->created_at))}}</td>
                                                 <td>
                                                     <a href="{{ route('admin.pages.noticias.edit', [$item->id]) }}"
                                                         title="Editar">

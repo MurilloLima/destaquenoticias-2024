@@ -160,8 +160,8 @@
                                                  </h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i>
-                                                        <a href="#">Administrador
-                                                             </a>
+                                                         <a href="#">Administrador
+                                                         </a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                             comments</span></a></li> --}}
@@ -205,8 +205,10 @@
                      </li>
 
                      <li class="nav-item drop-link">
-                         <a class="nav-link food" href="#">Cidade <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
+                         <a class="nav-link food" href="#">
+                             Categorias
+                             <i class="fa fa-angle-down" aria-hidden="true"></i>
+                         </a>
                          <ul class="dropdown">
                              @foreach ($cidades as $item)
                                  <li><a

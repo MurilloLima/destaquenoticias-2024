@@ -60,11 +60,15 @@
                 encodeURIComponent(window.location.href);
         }, false);
     </script>
+
+
 </head>
 
 <body>
     <!-- Container -->
     <div id="container">
+        <!-- Preloader -->
+
         @include('home.layout.nav')
         @yield('content')
         @include('home.layout.footer')

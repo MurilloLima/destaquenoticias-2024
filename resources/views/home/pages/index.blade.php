@@ -55,7 +55,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                                               ================================================== -->
+                                                                                                                                                                   ================================================== -->
     <section id="content-section">
         <div class="container">
 
@@ -166,7 +166,7 @@
                                                 href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                         </h2>
                                         <ul class="post-tags">
-                                            <li><i class="lnr lnr-user"></i><a href="#">Renata da silva</a></li>
+                                            {{-- <li><i class="lnr lnr-user"></i><a href="#">Renata da silva</a></li> --}}
 
                                             <li><i class="lnr lnr-eye"></i>{{ count($item->views) }} Views</li>
                                         </ul>

@@ -43,8 +43,10 @@
                  <img src="{{ asset('home/images/logo.png') }}" width="200" alt="">
              </a>
 
-             <div class="advertisement">
-                 <a href="#"><img src="{{ asset('home/upload/addsense/620x80.jpg') }}" alt=""></a>
+             <div class="advertisement" style="float: right;">
+                 <a href="{{ route('home.pages.parceiro.index') }}">
+                     <img src="{{ asset('home/images/680x80.png') }}" alt="">
+                 </a>
              </div>
          </div>
      </div>

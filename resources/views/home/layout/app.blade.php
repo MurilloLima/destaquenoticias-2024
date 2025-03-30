@@ -32,6 +32,10 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .pagination-list li {
+            padding-top: 5px;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ asset('home/fontawesome/css/font-awesome.min.css') }}">

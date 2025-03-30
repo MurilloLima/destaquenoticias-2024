@@ -68,10 +68,14 @@ Route::post('register/user/', [RegisterController::class, 'store'])->name('home.
 Route::get('login/', [HomeController::class, 'login'])->name('home.pages.login.index');
 
 //privacy
-Route::get('privacy', [HomeController::class, 'privacy'])->name('home.pages.privacy.index');
+Route::get('privacy/', [HomeController::class, 'privacy'])->name('home.pages.privacy.index');
 
 //sobre
-Route::get('sobre', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
+Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
+
+//parceiros
+Route::get('parceiro/', [HomeController::class, 'parceiro'])->name('home.pages.parceiro.index');
+
 
 Route::get('/dashboard', function () {
     $totalnews = Noticia::all();

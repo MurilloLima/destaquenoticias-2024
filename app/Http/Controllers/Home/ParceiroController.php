@@ -6,12 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Classificado;
 use App\Models\Noticia;
+use App\Models\Parceiro;
 use App\Models\Publicidade;
 use App\Models\view;
 use Illuminate\Http\Request;
 
 class ParceiroController extends Controller
 {
+    private $parceiro;
+    public function __construct(Parceiro $parceiro)
+    {
+        $this->parceiro = $parceiro;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -45,7 +51,19 @@ class ParceiroController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request) {}
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'gone' => 'required',
+            'wt' => 'required',
+        ]);
+        $this->parceiro->name = $request->get('name');
+        $this->parceiro->fone = $request->get('fone');
+        $this->parceiro->wt = $request->get('wt');
+        $this->parceiro->save();
+        return redirect()->back()->with('msg', 'Número reservado com sucesso!');
+    }
 
     /**
      * Display the specified resource.
@@ -66,7 +84,7 @@ class ParceiroController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-        return view('home.pages.parceiros.show', compact('id','cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.parceiros.show', compact('id', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

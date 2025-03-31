@@ -75,6 +75,7 @@ Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.i
 
 //parceiros
 Route::get('parceiro/', [HomeController::class, 'parceiro'])->name('home.pages.parceiro.index');
+Route::get('parceiro/{id}', [HomeController::class, 'parceirostore'])->name('home.pages.parceiro.store');
 
 
 Route::get('/dashboard', function () {

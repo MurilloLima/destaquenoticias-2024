@@ -38,6 +38,70 @@
         }
     </style>
 
+    <style>
+        .LGLeeN-keyboard-shortcuts-view {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+
+        .LGLeeN-keyboard-shortcuts-view table,
+        .LGLeeN-keyboard-shortcuts-view tbody,
+        .LGLeeN-keyboard-shortcuts-view td,
+        .LGLeeN-keyboard-shortcuts-view tr {
+            background: inherit;
+            border: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .LGLeeN-keyboard-shortcuts-view table {
+            display: table
+        }
+
+        .LGLeeN-keyboard-shortcuts-view tr {
+            display: table-row
+        }
+
+        .LGLeeN-keyboard-shortcuts-view td {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: table-cell;
+            color: #000;
+            padding: 6px;
+            vertical-align: middle;
+            white-space: nowrap
+        }
+
+        .LGLeeN-keyboard-shortcuts-view td:first-child {
+            text-align: end
+        }
+
+        .LGLeeN-keyboard-shortcuts-view td kbd {
+            background-color: #e8eaed;
+            border-radius: 2px;
+            border: none;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: inherit;
+            display: inline-block;
+            font-family: Google Sans Text, Roboto, Arial, sans-serif;
+            line-height: 16px;
+            margin: 0 2px;
+            min-height: 20px;
+            min-width: 20px;
+            padding: 2px 4px;
+            position: relative;
+            text-align: center
+        }
+    </style>
+
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&amp;lang=pt">
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=pt">
     <link rel="stylesheet" href="{{ asset('home/fontawesome/css/font-awesome.min.css') }}">
     <script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/57/8b/common.js"></script>
     <script type="text/javascript" charset="UTF-8" src="http://maps.google.com/maps-api-v3/api/js/57/8b/util.js"></script>

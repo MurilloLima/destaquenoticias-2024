@@ -109,9 +109,26 @@ class HomeController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-       
         return view('home.pages.parceiros.index', compact('cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+    }
 
+    public function parceirostore($id)
+    {
+        $cidades = Categoria::latest()->get();
+        $classificados = Classificado::latest()->get();
+        $noticias3 = Noticia::orderBy('id', 'DESC')->take(3)->get();
+        $noticias6 = Noticia::orderBy('id', 'DESC')->skip(3)->take(6)->get();
+        // dd($noticias3);
+        $brasil = Noticia::where('cat_id', '=', 6)->orderBy('id', 'DESC')->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->orderBy('id', 'DESC')->limit(4)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem = Noticia::inRandomOrder()->limit(10)->get();
+        $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+        $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
+        return view('home.pages.parceiros.name', compact('id', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

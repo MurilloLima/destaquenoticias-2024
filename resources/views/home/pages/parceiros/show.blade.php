@@ -11,7 +11,17 @@
                         Seja parceiro da destaque notícias
                     </h1>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (session('msg'))
+                            <div class="alert alert-success text-center">
+                                {{ session('msg') }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
                 <form action="{{ route('home.pages.parceiro.store') }}" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-md-12">
                             Número {{ $id }} escolhido, para finalizar preencha os campos abaixo. <br>

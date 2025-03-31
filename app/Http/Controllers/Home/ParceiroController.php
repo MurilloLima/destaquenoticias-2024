@@ -55,14 +55,31 @@ class ParceiroController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'gone' => 'required',
+            'fone' => 'required',
             'wt' => 'required',
         ]);
         $this->parceiro->name = $request->get('name');
         $this->parceiro->fone = $request->get('fone');
         $this->parceiro->wt = $request->get('wt');
         $this->parceiro->save();
-        return redirect()->back()->with('msg', 'Número reservado com sucesso!');
+
+        $cidades = Categoria::latest()->get();
+        $classificados = Classificado::latest()->get();
+        $noticias3 = Noticia::orderBy('id', 'DESC')->take(3)->get();
+        $noticias6 = Noticia::orderBy('id', 'DESC')->skip(3)->take(6)->get();
+        // dd($noticias3);
+        $brasil = Noticia::where('cat_id', '=', 6)->orderBy('id', 'DESC')->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->orderBy('id', 'DESC')->limit(4)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem = Noticia::inRandomOrder()->limit(10)->get();
+        $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+        $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
+        return view('home.pages.parceiros.pix', compact('cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+
+        // return redirect()->back()->with('msg', 'Número reservado com sucesso! Efetue o pagamento com a chave pix: 00020126360014br.gov.bcb.pix0114+559998131080052040000530398654047.005802BR5924EDILSON MIGUEL BRUSTOLON6010IMPERATRIZ62580520SAN2025033111354237550300017br.gov.bcb.brcode01051.0.06304BD4C');
     }
 
     /**

@@ -11,12 +11,11 @@
                         Seja parceiro da destaque notícias
                     </h1>
                 </div>
-                <form action="" method="post">
+                <form action="{{ route('home.pages.parceiro.store') }}" method="post">
                     <div class="row">
                         <div class="col-md-12">
                             Número {{ $id }} escolhido, para finalizar preencha os campos abaixo. <br>
-
-                            <form action="" id="contact-form" method="POST">
+                            <form action="{{ route('home.pages.parceiro.store') }}" id="contact-form" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-4">

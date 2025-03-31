@@ -10,6 +10,7 @@ use App\Http\Controllers\ClassificadoController;
 use App\Http\Controllers\DenunciaController;
 use App\Http\Controllers\DepoimentoController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Home\ParceiroController;
 use App\Http\Controllers\InformativoController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
@@ -74,8 +75,9 @@ Route::get('privacy/', [HomeController::class, 'privacy'])->name('home.pages.pri
 Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
 
 //parceiros
-Route::get('parceiro/', [HomeController::class, 'parceiro'])->name('home.pages.parceiro.index');
-Route::get('parceiro/{id}', [HomeController::class, 'parceirostore'])->name('home.pages.parceiro.store');
+Route::get('parceiro/', [ParceiroController::class, 'index'])->name('home.pages.parceiro.index');
+Route::get('parceiro/show/{id}', [ParceiroController::class, 'show'])->name('home.pages.parceiro.show');
+Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.pages.parceiro.store');
 
 
 Route::get('/dashboard', function () {

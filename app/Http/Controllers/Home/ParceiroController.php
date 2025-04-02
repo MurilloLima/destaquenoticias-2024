@@ -37,7 +37,10 @@ class ParceiroController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-        return view('home.pages.parceiros.index', compact('cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        $parceiro = Parceiro::all();
+
+
+        return view('home.pages.parceiros.index', compact('parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**
@@ -59,8 +62,9 @@ class ParceiroController extends Controller
             'wt' => 'required',
         ]);
         $this->parceiro->name = $request->get('name');
-        $this->parceiro->fone = $request->get('fone');
         $this->parceiro->wt = $request->get('wt');
+        $this->parceiro->email = $request->get('email');
+        $this->parceiro->number = $request->get('number');
         $this->parceiro->save();
 
         $cidades = Categoria::latest()->get();

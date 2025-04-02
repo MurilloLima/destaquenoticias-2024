@@ -900,7 +900,7 @@
                                 </a>
                             </li>
                             <li>
-                                 <a href="{{ route('home.pages.parceiro.show', ['id' => '195']) }}" class="btn btn-app"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '195']) }}" class="btn btn-app"
                                     style="color: #FFF; width: 60px; border-radius: 50%;; border-radius: 50%;">
                                     195
                                 </a>
@@ -908,7 +908,7 @@
                                     style="color: #FFF; width: 60px; border-radius: 50%;; border-radius: 50%;">
                                     196
                                 </a>
-                                 <a href="{{ route('home.pages.parceiro.show', ['id' => '197']) }}" class="btn btn-app"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '197']) }}" class="btn btn-app"
                                     style="color: #FFF; width: 60px; border-radius: 50%;; border-radius: 50%;">
                                     197
                                 </a>
@@ -916,7 +916,7 @@
                                     style="color: #FFF; width: 60px; border-radius: 50%;; border-radius: 50%;">
                                     198
                                 </a>
-                                 <a href="{{ route('home.pages.parceiro.show', ['id' => '199']) }}" class="btn btn-app"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '199']) }}" class="btn btn-app"
                                     style="color: #FFF; width: 60px; border-radius: 50%;; border-radius: 50%;">
                                     199
                                 </a>
@@ -934,7 +934,8 @@
                         <h3 style="color: #FFF;">Número já escolhidos</h3>
                         @foreach ($parceiro as $item)
                             <li class="">
-                                <a href="" class="btn btn-success" style="color: #FFF;  border-radius: 50%;" title="sadsa">
+                                <a href="" class="btn btn-success" style="color: #FFF;  border-radius: 50%;"
+                                    title="{{ $item->name }}">
                                     {{ $item->number }}
                                 </a>
                             </li>

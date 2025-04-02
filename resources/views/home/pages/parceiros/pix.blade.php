@@ -18,14 +18,19 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2>QR-CODE</h2>
-                        <img src="{{ asset('home/images/qrcode.png') }}" width="150" alt="">
+                        <img src="{{ asset('home/images/qrcode.jpeg') }}" width="150" alt="">
                     </div>
                 </div>
                 <div class="news-post article-post text-center" style="padding: 26px; color: #FFF">
                     <h2>Chave pix</h2>
-                    <input type="text"
-                        value="00020126360014br.gov.bcb.pix0114+559998131080052040000530398654047.005802BR5924EDILSON MIGUEL BRUSTOLON6010IMPERATRIZ62580520SAN2025033111354237550300017br.gov.bcb.brcode01051.0.06304BD4C'"
-                        class="form-control">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <input type="text" style="text-align: center" value="99 981310800" class="form-control">
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 @extends('home.layout.app')
-@section('title', 'Pa; border-radius: 50%;rceiro')
+@section('title', 'Parceiros')
 
 @section('content')
     <section id="content-section">

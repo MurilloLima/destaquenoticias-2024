@@ -13,9 +13,22 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        @if ($errors->any())
+                            <div class="alert alert-danger text-center" style="margin: 10px;">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li style="text-align: center">{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         @if (session('msg'))
-                            <div class="alert alert-success text-center">
-                                {{ session('msg') }}
+                            <div class="row text-center">
+                                <div class="col-md-12" \>
+                                    <div class="alert alert-success text-center" style="color: white; margin: 10px;">
+                                        {{ session('msg') }}
+                                    </div>
+                                </div>
                             </div>
                         @endif
                     </div>
@@ -33,12 +46,13 @@
                                         <input class="form-control" name="name" type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="mail">Telefone*</label>
-                                        <input class="form-control" name="fone" type="text" required>
+                                        <label for="text">Whatsapp*</label>
+                                        <input class="form-control" name="wt" type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="website">Whatsapp</label>
-                                        <input class="form-control" name="wt" type="text" required>
+                                        <label for="E-mail">E-mail</label>
+                                        <input class="form-control" name="email" type="email" required>
+                                        <input class="form-control" name="number" type="hidden" value="{{ $id }}">
                                     </div>
                                 </div>
                                 <br>

@@ -58,7 +58,7 @@ class ParceiroController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'fone' => 'required',
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
             'wt' => 'required',
         ]);
         $this->parceiro->name = $request->get('name');

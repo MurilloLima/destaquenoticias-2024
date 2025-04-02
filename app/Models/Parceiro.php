@@ -11,7 +11,8 @@ class Parceiro extends Model
 
     protected $fillable = [
         'name',
-        'fone',
+        'email',
         'wt',
+        'number'
     ];
 }

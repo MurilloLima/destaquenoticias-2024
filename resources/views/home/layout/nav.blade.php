@@ -176,34 +176,7 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link tech" href="#">Classificados <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
-                         <div class="mega-posts-menu">
-                             <div class="posts-line">
-                                 <div class="row">
-                                     @foreach ($classificados as $item)
-                                         <div class="col-lg-3 col-md-6">
-                                             <div class="news-post standart-post">
-                                                 <div class="post-image">
-                                                     <a href="#">
-                                                         <img src="{{ asset('home/upload/blog/s37.jpg') }}"
-                                                             alt="">
-                                                     </a>
-                                                     <a href="#" class="category category-tech">Classificado</a>
-                                                 </div>
-                                                 <h2><a href="#">{{ $item->title }}</a></h2>
-                                                 <ul class="post-tags">
-                                                     <li>
-                                                         <i class="lnr lnr-user"></i>
-                                                         <a href="#">Administrador</a>
-                                                     </li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                     @endforeach
-                                 </div>
-                             </div>
-                         </div>
+                         <a href="{{ route('home.pages.parceiro.index') }}" class="nav-link tech" href="#">Seja parceiro</a>
                      </li>
 
                      <li class="nav-item drop-link">

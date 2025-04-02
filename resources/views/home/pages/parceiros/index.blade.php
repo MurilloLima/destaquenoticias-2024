@@ -326,237 +326,301 @@
                                     style="color: #FFF">
                                     76
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '77']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    77
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '78']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    78
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '79']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    79
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '80']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    80
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '81']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    81
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '82']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    82
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '83']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    83
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '84']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    84
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '85']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    85
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '86']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    86
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '87']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    87
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '88']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    88
                                 </a>
 
                             </li>
                             <li>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '01']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '89']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    01
+                                    89
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '02']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '90']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    02
+                                    90
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '03']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '91']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    03
+                                    91
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '04']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '92']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    04
+                                    92
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '05']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '93']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    05
+                                    93
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '06']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '94']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    06
+                                    94
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '07']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '95']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    07
+                                    95
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '08']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '96']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    08
+                                    96
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '09']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '97']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    09
+                                    97
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '10']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '98']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    10
+                                    98
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '99']) }}" class="btn btn-primary"
                                     style="color: #FFF">
-                                    11
+                                    99
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}" class="btn btn-primary"
-                                    style="color: #FFF">
-                                    11
-                                </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '100']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    100
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '101']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    101
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '102']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    102
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '103']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    103
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '104']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    104
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '105']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    105
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '106']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    106
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '107']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    107
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '108']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    108
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
-                                    class="btn btn-primary" style="color: #FFF">
-                                    11
-                                </a>
-
                             </li>
                             <li>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '01']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '109']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    01
+                                    109
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '02']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '110']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    02
+                                    110
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '03']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '111']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    03
+                                    111
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '04']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '112']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    04
+                                    112
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '05']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '113']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    05
+                                    113
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '06']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '114']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    06
+                                    114
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '07']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '115']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    07
+                                    115
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '08']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '116']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    08
+                                    116
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '09']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '117']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    09
+                                    117
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '10']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '118']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    10
+                                    118
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '119']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    119
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '120']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    120
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '121']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    121
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '122']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    122
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '123']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    123
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '124']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    124
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '124']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    124
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '125']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    125
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '126']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    126
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '127']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    127
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                            </li>
+                            <li>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    128
                                 </a>
-                                <a href="{{ route('home.pages.parceiro.show', ['id' => '11']) }}"
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
                                     class="btn btn-primary" style="color: #FFF">
-                                    11
+                                    128
                                 </a>
-
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
+                                <a href="{{ route('home.pages.parceiro.show', ['id' => '128']) }}"
+                                    class="btn btn-primary" style="color: #FFF">
+                                    128
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -566,9 +630,8 @@
                     <ul class="pagination-list">
                         <h3 style="color: #FFF;">Números já escolhidos</h3>
                         @foreach ($parceiro as $item)
-                            <li>
-                                <a href=""
-                                    class="btn btn-success" style="color: #FFF" title="dsadsa">
+                            <li class="">
+                                <a href="" class="btn btn-success" style="color: #FFF" title="dsadsa">
                                     {{ $item->number }}
                                 </a>
                             </li>

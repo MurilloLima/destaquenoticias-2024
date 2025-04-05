@@ -160,8 +160,6 @@
             document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
         }, false);
     </script>
-
-
 </body>
 
 </html>

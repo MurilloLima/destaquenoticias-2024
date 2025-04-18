@@ -1,5 +1,3 @@
-RewriteCond %{HTTP_HOST} ^destaquenoticias.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.destaquenoticias.com$
-RewriteCond %{REQUEST_URI} !public/
+RewriteEngine On
+RewriteRule ^$ /public/ [L]
 RewriteRule (.*) /public/$1 [L]
-

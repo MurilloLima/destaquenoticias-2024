@@ -19,9 +19,9 @@
                          <li>
                              <a href="{{ route('home.pages.contatos.index') }}">Fale conosco</a>
                          </li>
-                         <li>
+                         {{-- <li>
                              <a href="" data-toggle="modal" data-target="#modalLogin">Login</a>
-                         </li>
+                         </li> --}}
                      </ul>
                  </div>
                  <div class="col-md-4 col-sm-3">

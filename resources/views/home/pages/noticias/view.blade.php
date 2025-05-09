@@ -21,19 +21,22 @@
                                 {{-- <i class="lnr lnr-user"></i> --}}
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <a href="#">
-                                    {{ date( 'd/m/Y' , strtotime($data->created_at))}}
+                                    {{ date('d/m/Y', strtotime($data->created_at)) }}
                                 </a>
                             </li>
                             {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>20 comments</span></a></li> --}}
                             <li>
                                 <i class="lnr lnr-eye"></i>
                                 {{-- visualizacoes --}}
-                                {{ count($data->views) }} Views
+                                {{ count($data->views) }} visualizações
                             </li>
                         </ul>
                         <div class="share-post-box" style="text-align: center;">
                             <a href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"
                                 id="whatsapp-share-btt" rel="nofollow" target="_blank" class="whatsapp-share-button"></a>
+                            {{-- facebook --}}
+                            <a href="" id="facebook-share-btt" rel="nofollow" target="_blank"
+                                class="facebook-share-button"></a>
                         </div>
                         <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
                             style="width: 100%; height: 450px;;">

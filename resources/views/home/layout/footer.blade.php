@@ -209,5 +209,5 @@
     <!-- Back to Top -->
     <a href="https://wa.me/5599981310800" class="back-to-top">
         {{-- divulgar --}}
-        <img src="{{ asset('home/img/avatar.png') }}" style="width: 100px" class="divulgar" alt="">
+        <img src="{{ asset('home/img/avatar.ico') }}" style="width: 100px" class="divulgar" alt="">
     </a>

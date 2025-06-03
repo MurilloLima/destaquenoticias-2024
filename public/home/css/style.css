@@ -18,12 +18,14 @@
  15.Footer
  16.Responsive Part
 -------------------------------------------------*/
+
 .whatsapp-share-button {
     display: inline-block;
     width: 40px;
     height: 40px;
     margin: 5px;
-    background-size: 100% 100%; /* ou 'contain' */
+    background-size: 100% 100%;
+    /* ou 'contain' */
     background-image: url("/home/images/whatsapp-icon.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -35,8 +37,8 @@
 
 
 
-    text-decoration: none;
-    color: initial;
+text-decoration: none;
+color: initial;
 
 #container {
     opacity: 0;
@@ -4376,3 +4378,18 @@ footer .down-footer a.go-top:hover {
         height: auto;
     }
 }
+
+@keyframes imagem {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+

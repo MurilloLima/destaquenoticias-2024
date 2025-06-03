@@ -20,7 +20,7 @@
                       <!-- ***** Logo Start ***** -->
                       <a href="./" class="logo" style="font: bold;">
                           {{-- SAAE ESTREITO-MA --}}
-                          <img src="{{ asset('home/assets/images/logo.png') }}" alt="Chain App Dev">
+                          <img src="{{ asset('home/assets/images/logo.png') }}" alt="">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->

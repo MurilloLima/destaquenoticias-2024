@@ -8,7 +8,6 @@ use App\Models\Noticia;
 use App\Models\Publicidade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Intervention\Image\ImageManager;
 use Intervention\Image\Laravel\Facades\Image;
 
 class NoticiaController extends Controller
@@ -117,30 +116,36 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, Noticia $noticia)
     {
-        // upload de image
-        if ($request->hasFile('img') && $request->file('img')->isValid()) {
-            # code...
-            $image = $request->file('img');
-            // Define um aleatório para o arquivo baseado no timestamps atual
-            $name = uniqid(date('HisYmd'));
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required',
+            'desc' => 'required',
+            'content' => 'required',
+        ]);
 
-            // Recupera a extensão do arquivo
-            $extension = $image->extension();
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->extension();
+        $destinationPathThumbnail = public_path('upload/noticias');
 
-            // Define finalmente o nome
-            $nameFile = "{$name}.{$extension}";
+        $img = Image::read($image->path());
+        $img->resize(600, 400, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPathThumbnail . '/' . $imageName);
 
-            $noticia = $this->noticia->find($request->id);
-            $image->move(public_path('upload/noticias'), $nameFile);
-            $noticia->img = $nameFile;
-            $noticia->cat_id = $request->get('cat_id');
-            $noticia->title = $request->get('title');
-            $noticia->desc = $request->get('desc');
-            $noticia->slug = Str::slug($request->title, '-');
-            $noticia->content = $request->get('content');
-            $noticia->update();
-            return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
-        }
+        $destinationPath = public_path('/upload/noticias');
+        $image->move($destinationPath, $imageName);
+
+        //salva no bd
+        $noticia = $this->noticia->find($request->id);
+        dd($noticia);
+        $noticia->img = $imageName;
+        $noticia->cat_id = $request->cat_id;
+        $noticia->title = $request->title;
+        $noticia->slug = Str::slug($request->title, '-');
+        $noticia->desc = $request->desc;
+        $noticia->content = $request->content;
+        $noticia->update();
+        return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
     }
 
     /**

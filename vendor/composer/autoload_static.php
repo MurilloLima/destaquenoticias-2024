@@ -134,6 +134,7 @@ class ComposerStaticInitb0c49d47f4cfa2ae996c2717f87c58a2
         ),
         'I' => 
         array (
+            'Intervention\\Image\\Laravel\\' => 27,
             'Intervention\\Image\\' => 19,
             'Intervention\\Gif\\' => 17,
             'Illuminate\\Support\\' => 19,
@@ -446,6 +447,10 @@ class ComposerStaticInitb0c49d47f4cfa2ae996c2717f87c58a2
         'Laravel\\Breeze\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/breeze/src',
+        ),
+        'Intervention\\Image\\Laravel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/intervention/image-laravel/src',
         ),
         'Intervention\\Image\\' => 
         array (
@@ -3192,6 +3197,9 @@ class ComposerStaticInitb0c49d47f4cfa2ae996c2717f87c58a2
         'Intervention\\Image\\Interfaces\\SizeInterface' => __DIR__ . '/..' . '/intervention/image/src/Interfaces/SizeInterface.php',
         'Intervention\\Image\\Interfaces\\SpecializableInterface' => __DIR__ . '/..' . '/intervention/image/src/Interfaces/SpecializableInterface.php',
         'Intervention\\Image\\Interfaces\\SpecializedInterface' => __DIR__ . '/..' . '/intervention/image/src/Interfaces/SpecializedInterface.php',
+        'Intervention\\Image\\Laravel\\Facades\\Image' => __DIR__ . '/..' . '/intervention/image-laravel/src/Facades/Image.php',
+        'Intervention\\Image\\Laravel\\ImageResponseFactory' => __DIR__ . '/..' . '/intervention/image-laravel/src/ImageResponseFactory.php',
+        'Intervention\\Image\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/intervention/image-laravel/src/ServiceProvider.php',
         'Intervention\\Image\\MediaType' => __DIR__ . '/..' . '/intervention/image/src/MediaType.php',
         'Intervention\\Image\\ModifierStack' => __DIR__ . '/..' . '/intervention/image/src/ModifierStack.php',
         'Intervention\\Image\\Modifiers\\AbstractDrawModifier' => __DIR__ . '/..' . '/intervention/image/src/Modifiers/AbstractDrawModifier.php',

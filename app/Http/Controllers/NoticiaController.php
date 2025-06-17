@@ -9,6 +9,7 @@ use App\Models\Publicidade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
+use Intervention\Image\Laravel\Facades\Image;
 
 class NoticiaController extends Controller
 {
@@ -48,29 +49,32 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => [
-                'required',
-                'image',
-                'mimes:jpg,png,jpeg,gif,svg',
-                'max:2048'
-            ],
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'title' => 'required',
             'desc' => 'required',
             'content' => 'required',
         ]);
 
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('upload/noticias'), $imageName);
-            $this->noticia->img = $imageName;
-            $this->noticia->cat_id = $request->cat_id;
-            $this->noticia->title = $request->title;
-            $this->noticia->slug = Str::slug($request->title, '-');
-            $this->noticia->desc = $request->desc;
-            $this->noticia->content = $request->content;
-            $this->noticia->save();
-            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
-        }
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->extension();
+
+        $destinationPathThumbnail = public_path('upload/noticias');
+        $img = Image::read($image->path());
+        $img->resize(600, 400, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPathThumbnail . '/' . $imageName);
+
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $imageName);
+        $this->noticia->img = $imageName;
+        $this->noticia->cat_id = $request->cat_id;
+        $this->noticia->title = $request->title;
+        $this->noticia->slug = Str::slug($request->title, '-');
+        $this->noticia->desc = $request->desc;
+        $this->noticia->content = $request->content;
+        $this->noticia->save();
+
+        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
     }
 
     /**

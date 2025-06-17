@@ -64,7 +64,7 @@ class NoticiaController extends Controller
             $constraint->aspectRatio();
         })->save($destinationPathThumbnail . '/' . $imageName);
 
-        $destinationPath = public_path('/images');
+        $destinationPath = public_path('/upload/noticias');
         $image->move($destinationPath, $imageName);
         $this->noticia->img = $imageName;
         $this->noticia->cat_id = $request->cat_id;

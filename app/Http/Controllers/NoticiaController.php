@@ -54,27 +54,31 @@ class NoticiaController extends Controller
             'content' => 'required',
         ]);
 
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->extension();
 
-        $destinationPathThumbnail = public_path('upload/noticias');
-        $img = Image::read($image->path());
-        $img->resize(600, 400, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPathThumbnail . '/' . $imageName);
 
-        $destinationPath = public_path('/noticias');
-        $image->move($destinationPath, $imageName);
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $imageName = time() . '.' . $request->image->extension();
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->extension();
 
-        $this->noticia->img = $imageName;
-        $this->noticia->cat_id = $request->cat_id;
-        $this->noticia->title = $request->title;
-        $this->noticia->slug = Str::slug($request->title, '-');
-        $this->noticia->desc = $request->desc;
-        $this->noticia->content = $request->content;
+            $destinationPathThumbnail = public_path('upload/noticias');
+            $img = Image::read($image->path());
+            $img->resize(600, 400, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPathThumbnail . '/' . $imageName);
 
-        return back()->with('msg', 'Image Uploaded successfully!')
-            ->with('imageName', $imageName);
+            $destinationPath = public_path('/noticias');
+            $image->move($destinationPath, $imageName);
+
+            $this->noticia->img = $imageName;
+            $this->noticia->cat_id = $request->cat_id;
+            $this->noticia->title = $request->title;
+            $this->noticia->slug = Str::slug($request->title, '-');
+            $this->noticia->desc = $request->desc;
+            $this->noticia->content = $request->content;
+            $this->noticia->save();
+            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+        }
     }
 
     /**

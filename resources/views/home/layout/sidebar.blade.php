@@ -6,7 +6,7 @@
         <div class="search-widget widget">
             <form action="{{ route('home.pages.search.index') }}" method="POST">
                 @csrf
-                <input type="search" placeholder="Buscar..." />
+                <input type="search" placeholder="Buscar..." name="pesq" />
                 <button type="submit">
                     <i class="fa fa-search"></i>
                 </button>

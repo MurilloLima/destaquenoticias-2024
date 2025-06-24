@@ -2311,7 +2311,7 @@ ul.small-posts>li:last-child {
 .single-post>h1 {
     font-size: 34px;
     margin-bottom: 12px;
-    padding: 0 30px;
+    /* padding: 0 30px; */
 }
 
 .single-post ul.post-tags {

@@ -4,7 +4,8 @@
     <!-- Sidebar -->
     <div class="sidebar theiaStickySidebar">
         <div class="search-widget widget">
-            <form>
+            <form action="{{ route('home.pages.search.index') }}" method="POST">
+                @csrf
                 <input type="search" placeholder="Buscar..." />
                 <button type="submit">
                     <i class="fa fa-search"></i>

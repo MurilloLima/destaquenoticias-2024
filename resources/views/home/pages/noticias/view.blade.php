@@ -48,10 +48,6 @@
                                 </a>
                             </div>
                         </div>
-
-
-
-
                         <div class="text-boxes" style="text-align: justify">
                             {!! $data->content !!}
                         </div>

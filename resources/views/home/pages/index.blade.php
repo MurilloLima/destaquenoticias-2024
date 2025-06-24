@@ -15,7 +15,7 @@
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
-                                        class="category category">{{ $item->categoria->name }}</a>
+                                        class="category category-world">{{ $item->categoria->name }}</a>
                                     <h2><a
                                             href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                     </h2>
@@ -38,7 +38,7 @@
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
                         <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
-                            class="category category-world">{{ $item->categoria->name }}</a>
+                            class="category category">{{ $item->categoria->name }}</a>
                         <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</h2>
                         <ul class="post-tags">
                             <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li>

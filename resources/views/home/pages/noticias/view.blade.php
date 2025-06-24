@@ -41,13 +41,11 @@
                                 class="facebook-share-button"></a>
                         </div>
 
-                        <a href="https://api.whatsapp.com/send?phone=91XXXXXXXXXX&text=urlencodedtext"
-                            target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=91XXXXXXXXXX&text=urlencodedtext" target="_blank">
                         </a>
 
 
-                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
-                            style="width: 100%; height: 450px;;">
+                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="">
                         <div class="text-boxes" style="text-align: justify">
                             {!! $data->content !!}
                         </div>

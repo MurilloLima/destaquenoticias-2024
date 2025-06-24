@@ -8,12 +8,11 @@
     content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img ?? '' }}">
 <meta property="og:type" content="website">
 @section('content')
-    <section id="content-section" style="transform: none;">
-        <div class="container" style="transform: none;">
-            <div class="row" style="transform: none;">
-                <div class="col-lg-8">
+    <section id="content-section">
+        <div class="container">
+            <div class="row">
 
-                    <!-- single-post -->
+                <div class="col-lg-8">
                     <div class="single-post">
                         <h1>{{ $data->title }}</h1>
                         <p style="padding: 0 30px">{{ $data->desc }}</p>
@@ -32,20 +31,34 @@
                                 {{ count($data->views) }} visualizações
                             </li>
                         </ul>
-                        <div class="share-post-box" style="text-align: center;">
-                            <a href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"
-                                id="whatsapp-share-btt" rel="nofollow" target="_blank" class="whatsapp-share-button">
-                            </a>
-                            {{-- facebook --}}
-                            <a href="" id="facebook-share-btt" rel="nofollow" target="_blank"
-                                class="facebook-share-button"></a>
-                        </div>
-
-                        <a href="https://api.whatsapp.com/send?phone=91XXXXXXXXXX&text=urlencodedtext" target="_blank">
-                        </a>
-
 
                         <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="">
+
+                        <span style="font-size: 10px">Compartilhar</span><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a
+                                        href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}">
+                                        <img src="{{ asset('home/images/whatsapp-icon.png') }}" style="width: 40px"
+                                            alt="">
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/sharer/sharer.php?u=www.destaquenoticias.com/view/{{ $data->slug }}">
+                                        <img src="{{ asset('home/images/face.png') }}" style="width: 40px"
+                                            alt="">
+                                    </a>
+                                    <!-- Your share button code -->
+                                    <div class="fb-share-button" data-href="http://seusite.com/sua-pagina.html"
+                                        data-layout="button_count">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+
                         <div class="text-boxes" style="text-align: justify">
                             {!! $data->content !!}
                         </div>

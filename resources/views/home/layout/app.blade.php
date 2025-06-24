@@ -137,7 +137,25 @@
         }, false);
     </script>
 
-
+    {{-- whatsapp --}}
+    <script>
+        //Constrói a URL depois que o DOM estiver pronto
+        document.addEventListener("DOMContentLoaded", function() {
+            //conteúdo que será compartilhado: Título da página + URL
+            var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+            //altera a URL do botão
+            document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
+        }, false);
+    </script>
+    {{-- face --}}
+    <script>
+        //Constrói a URL depois que o DOM estiver pronto
+        document.addEventListener("DOMContentLoaded", function() {
+            //altera a URL do botão
+            document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" +
+                encodeURIComponent(window.location.href);
+        }, false);
+    </script>
 </head>
 
 <body>
@@ -178,6 +196,7 @@
                 encodeURIComponent(window.location.href);
         }, false);
     </script>
+
 </body>
 
 </html>

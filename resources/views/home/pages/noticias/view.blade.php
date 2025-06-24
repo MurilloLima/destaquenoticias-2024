@@ -15,7 +15,7 @@
                 <div class="col-lg-8">
                     <div class="single-post">
                         <h1>{{ $data->title }}</h1>
-                        <p style="padding: 0 30px">{{ $data->desc }}</p>
+                        <p>{{ $data->desc }}</p>
                         <ul class="post-tags">
                             <li>
                                 {{-- <i class="lnr lnr-user"></i> --}}

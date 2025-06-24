@@ -120,14 +120,16 @@ class NoticiaController extends Controller
     public function update(Request $request, Noticia $noticia)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'title' => 'required',
             'desc' => 'required',
             'content' => 'required',
         ]);
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-            $imageName = time() . '.' . $request->image->extension();
-            $image = $request->file('image');
+        $noticia = $this->noticia->find($request->id);
+
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
+            $imageName = time() . '.' . $request->img->extension();
+            $image = $request->file('img');
             $imageName = time() . '.' . $image->extension();
 
             $destinationPathThumbnail = public_path('upload/noticias');
@@ -139,12 +141,12 @@ class NoticiaController extends Controller
             $destinationPath = public_path('/noticias');
             $image->move($destinationPath, $imageName);
 
-            $this->noticia->img = $imageName;
-            $this->noticia->cat_id = $request->cat_id;
-            $this->noticia->title = $request->title;
-            $this->noticia->slug = Str::slug($request->title, '-');
-            $this->noticia->desc = $request->desc;
-            $this->noticia->content = $request->content;
+            $noticia->img = $imageName;
+            $noticia->cat_id = $request->cat_id;
+            $noticia->title = $request->title;
+            $noticia->slug = Str::slug($request->title, '-');
+            $noticia->desc = $request->desc;
+            $noticia->content = $request->content;
             $noticia->update();
             return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
         }

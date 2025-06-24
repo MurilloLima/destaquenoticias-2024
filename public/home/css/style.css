@@ -1147,7 +1147,7 @@ body.boxed-style #container {
 
 .categories-box a.more {
     margin-bottom: 25px;
-    color: #00A7B3;
+    color: #1866CF;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
 }
@@ -1157,10 +1157,10 @@ body.boxed-style #container {
 }
 
 a.category {
-    background: #00A7B3;
+    background: #1866CF;
     display: inline-block;
     color: #fff !important;
-    font-size: 11px;
+    font-size: 12px;
     padding: 1px 10px;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;

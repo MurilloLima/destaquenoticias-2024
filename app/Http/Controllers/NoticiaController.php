@@ -54,8 +54,6 @@ class NoticiaController extends Controller
             'content' => 'required',
         ]);
 
-
-
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $imageName = time() . '.' . $request->image->extension();
             $image = $request->file('image');
@@ -127,30 +125,29 @@ class NoticiaController extends Controller
             'desc' => 'required',
             'content' => 'required',
         ]);
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $imageName = time() . '.' . $request->image->extension();
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->extension();
 
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->extension();
-        $destinationPathThumbnail = public_path('upload/noticias');
+            $destinationPathThumbnail = public_path('upload/noticias');
+            $img = Image::read($image->path());
+            $img->resize(600, 400, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPathThumbnail . '/' . $imageName);
 
-        $img = Image::read($image->path());
-        $img->resize(600, 400, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPathThumbnail . '/' . $imageName);
+            $destinationPath = public_path('/noticias');
+            $image->move($destinationPath, $imageName);
 
-        $destinationPath = public_path('/upload/noticias');
-        $image->move($destinationPath, $imageName);
-
-        //salva no bd
-        $noticia = $this->noticia->find($request->id);
-        dd($noticia);
-        $noticia->img = $imageName;
-        $noticia->cat_id = $request->cat_id;
-        $noticia->title = $request->title;
-        $noticia->slug = Str::slug($request->title, '-');
-        $noticia->desc = $request->desc;
-        $noticia->content = $request->content;
-        $noticia->update();
-        return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
+            $this->noticia->img = $imageName;
+            $this->noticia->cat_id = $request->cat_id;
+            $this->noticia->title = $request->title;
+            $this->noticia->slug = Str::slug($request->title, '-');
+            $this->noticia->desc = $request->desc;
+            $this->noticia->content = $request->content;
+            $noticia->update();
+            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+        }
     }
 
     /**

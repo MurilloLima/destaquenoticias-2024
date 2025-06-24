@@ -16,8 +16,9 @@
                                 <div class="hover-box">
                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                         class="category category-world">{{ $item->categoria->name }}</a>
-                                    <h2><a
-                                            href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                    <h2>
+                                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}
+                                        </a>
                                     </h2>
                                     <ul class="post-tags">
                                         <li>
@@ -39,9 +40,11 @@
                     <div class="hover-box">
                         <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                             class="category category">{{ $item->categoria->name }}</a>
-                        <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</h2>
+                        <h2>
+                            <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}
+                        </h2>
                         <ul class="post-tags">
-                            <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li>
+                            {{-- <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li> --}}
                             {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
                         </ul>
                     </div>
@@ -52,7 +55,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                                                                   ================================================== -->
+                                                                                                                                                                                               ================================================== -->
     <section id="content-section">
         <div class="container">
 
@@ -158,7 +161,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <h2>
+                                        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
                                             <a
                                                 href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                         </h2>

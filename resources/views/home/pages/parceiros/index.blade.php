@@ -934,11 +934,13 @@
                         <h3 style="color: #FFF;">Número já escolhidos</h3>
                         @foreach ($parceiro as $item)
                             <li class="">
+                                {{ $item->name }} reservou o número
                                 <a href="" class="btn btn-danger" style="color: #FFF;  border-radius: 50%;"
                                     title="Aguardando pagamento">
                                     {{ $item->number }}
                                 </a>
-                            </li>
+                                - Aguardando pagamento.
+                            </li> <br>
                         @endforeach
                     </ul>
                 </div>

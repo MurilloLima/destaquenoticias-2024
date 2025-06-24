@@ -16,7 +16,7 @@
                     <!-- single-post -->
                     <div class="single-post">
                         <h1>{{ $data->title }}</h1>
-                        <p>{{ $data->desc }}</p>
+                        <p style="padding: 0 30px">{{ $data->desc }}</p>
                         <ul class="post-tags">
                             <li>
                                 {{-- <i class="lnr lnr-user"></i> --}}
@@ -48,7 +48,7 @@
 
                         <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
                             style="width: 100%; height: 450px;;">
-                        <div class="text-boxes">
+                        <div class="text-boxes" style="text-align: justify">
                             {!! $data->content !!}
                         </div>
                     </div>

@@ -36,27 +36,16 @@
 
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <span style="font-size: 10px">Compartilhar</span><br>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <a
-                                                href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}">
-                                                <img src="{{ asset('home/images/whatsapp-icon.png') }}" style="width: 40px"
-                                                    alt="">
-                                            </a>
-                                            <a
-                                                href="https://www.facebook.com/sharer/sharer.php?u=www.destaquenoticias.com/view/{{ $data->slug }}">
-                                                <img src="{{ asset('home/images/face.png') }}" style="width: 40px"
-                                                    alt="">
-                                            </a>
-                                            <!-- Your share button code -->
-                                            <div class="fb-share-button" data-href="http://seusite.com/sua-pagina.html"
-                                                data-layout="button_count">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
+                                {{-- <span style="font-size: 10px">Compartilhar</span><br> --}}
+                                <a
+                                    href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}">
+                                    <img src="{{ asset('home/images/whatsapp-icon.png') }}" style="width: 40px"
+                                        alt="">
+                                </a>
+                                <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=www.destaquenoticias.com/view/{{ $data->slug }}">
+                                    <img src="{{ asset('home/images/face.png') }}" style="width: 40px" alt="">
+                                </a>
                             </div>
                         </div>
 

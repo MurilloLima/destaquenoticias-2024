@@ -1131,7 +1131,7 @@ body.boxed-style #container {
 
 .categories-box a.more {
     margin-bottom: 25px;
-    color: #00A7B3;
+    color: #1268D3;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
 }
@@ -1141,7 +1141,7 @@ body.boxed-style #container {
 }
 
 a.category {
-    background: #00A7B3;
+    background: #1268D3;
     display: inline-block;
     color: #fff !important;
     font-size: 11px;

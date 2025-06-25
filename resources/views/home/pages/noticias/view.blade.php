@@ -32,7 +32,9 @@
                             </li>
                         </ul>
 
-                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="">
+                        <div class="col-md-12">
+                            <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="" style="height: 400px;">
+                        </div>
 
                         <div class="row">
                             <div class="col-md-12 text-center">

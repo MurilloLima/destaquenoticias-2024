@@ -16,7 +16,7 @@ use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicidadeController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\RifaController;
+use App\Http\Controllers\Home\RifaController;
 use App\Models\Noticia;
 use Illuminate\Support\Facades\Route;
 
@@ -84,7 +84,8 @@ Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.
 Route::post('pesquisar/', [HomeController::class, 'search'])->name('home.pages.search.index');
 
 //rifas
-Route::get('parceiros/rifas/', [HomeController::class, 'rifas'])->name('home.pages.rifas.index');
+Route::get('parceiros/rifas/', [RifaController::class, 'index'])->name('home.pages.rifas.index');
+Route::post('rifa/store', [RifaController::class, 'store'])->name('home.pages.parceiro.store');
 
 
 

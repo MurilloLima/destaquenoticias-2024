@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('rifanums', function (Blueprint $table) {
             $table->id();
+            $table->integer('rifa_id');
             $table->string('num');
             $table->timestamps();
         });

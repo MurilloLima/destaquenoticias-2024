@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Rifanum extends Model
 {
     use HasFactory;
+
+     protected $fillable = [
+        'num',
+    ];
+
 }

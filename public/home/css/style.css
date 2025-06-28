@@ -17,7 +17,19 @@
  14.Underconstruction page
  15.Footer
  16.Responsive Part
+ #232323
 -------------------------------------------------*/
+.rifa a {
+    color: #1268D3;
+    background-color: #FFF;
+}
+.rifa a:houver {
+    color: #000;
+    background-color: #FFF;
+}
+
+
+
 #container {
     opacity: 0;
     overflow: hidden;
@@ -887,11 +899,13 @@ body.boxed-style #container {
 }
 
 #content-section ul.pagination-list li a {
-    padding: 6px 14px;
-    color: #565656;
+    /* padding: 6px 14px; */
+    color: #1268D3;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
     border: 1px solid #f1f1f1;
+    margin: 1px;
+    padding: 4px;
 }
 
 #content-section ul.pagination-list li a.active {
@@ -899,7 +913,7 @@ body.boxed-style #container {
 }
 
 #content-section ul.pagination-list li a:hover {
-    background: #00A7B3;
+    background: #232323;
     border: 1px solid transparent;
     color: #fff;
 }

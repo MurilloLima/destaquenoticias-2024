@@ -8,20 +8,23 @@ use App\Models\Classificado;
 use App\Models\Noticia;
 use App\Models\Parceiro;
 use App\Models\Publicidade;
+use App\Models\Rifa;
 use App\Models\view;
 use Illuminate\Http\Request;
 
 class ParceiroController extends Controller
 {
     private $parceiro;
-    public function __construct(Parceiro $parceiro)
+    private $rifa;
+    public function __construct(Parceiro $parceiro, Rifa $rifa)
     {
         $this->parceiro = $parceiro;
+        $this->rifa = $rifa;
     }
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $cidades = Categoria::latest()->get();
         $classificados = Classificado::latest()->get();
@@ -38,9 +41,10 @@ class ParceiroController extends Controller
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
         $parceiro = Parceiro::all();
+        $rifanum = Rifa::all();
 
 
-        return view('home.pages.parceiros.index', compact('parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.parceiros.index', compact('rifanum', 'parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

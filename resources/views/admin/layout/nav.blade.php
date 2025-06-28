@@ -86,14 +86,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.pages.depoimento.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-comments"></i>
-                        <p>
-                            Depoimentos
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('admin.pages.denuncia.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-clock"></i>
                         <p>
@@ -110,6 +102,16 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.rifa.index') }}" class="nav-link">
+                        {{-- <i class="nav-icon fas fa-urses"></i> --}}
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>
+                            Rifas
+                        </p>
+                    </a>
+                </li>
+
                 {{-- @endif --}}
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="post">

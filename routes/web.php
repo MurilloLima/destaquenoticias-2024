@@ -16,6 +16,7 @@ use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicidadeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RifaController;
 use App\Models\Noticia;
 use Illuminate\Support\Facades\Route;
 
@@ -146,6 +147,10 @@ Route::middleware('auth')->group(function () {
     //classificados imagens cliente
     Route::get('admin/classificado/fotos/{id}', [ClassificadoController::class, 'index'])->name('admin.pages.foto.create');
     Route::post('admin/classificado/fotos/store', [ClassificadoController::class, 'store'])->name('admin.pages.foto.store');
+
+    //rifa
+    Route::get('admin/rifas', [RifaController::class, 'index'])->name('admin.pages.rifa.index');
+    Route::post('admin/rifa/store', [RifaController::class, 'store'])->name('admin.pages.rifa.store');
 });
 
 

@@ -10,6 +10,8 @@ class Rifa extends Model
     use HasFactory;
 
     protected $fillable = [
-        'num'
+        'num',
+        'image',
+        'slug'
     ];
 }

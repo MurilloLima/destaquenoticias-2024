@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('rifas', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('title');
+            $table->string('num');
             $table->string('slug');
             $table->timestamps();
         });

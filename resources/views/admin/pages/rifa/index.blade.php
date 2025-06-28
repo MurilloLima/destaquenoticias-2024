@@ -33,62 +33,45 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-12">
+                        @if (session('msg'))
+                            <div class="alert alert-success text-center">
+                                {{ session('msg') }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Notícias</h3>
+                                <h3 class="card-title">Rifas</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-12">
-                                        @if (session('msg'))
-                                            <div class="alert alert-success text-center">
-                                                {{ session('msg') }}
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
+
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th style="width: 10px">#</th>
-                                            <th>Título</th>
-                                            <th style="width: 140px">Criada em</th>
-                                            <th style="width: 70px">#</th>
+                                            <th>Titulo</th>
+                                            <th>QTD</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
                                                 <td>{{ $item->title }}</td>
-                                                <td>{{ date('d/m/Y H:i', strtotime($item->created_at)) }}</td>
-                                                <td>
-                                                    <a href="{{ route('admin.pages.noticias.edit', [$item->id]) }}"
-                                                        title="Editar">
-                                                        <i class="fa fa-edit"></i>
-                                                    </a>
-                                                    <a href="{{ route('admin.pages.noticias.destroy', [$item->id]) }}"
-                                                        title="Excluir">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                </td>
+                                                <td>{{ $item->num }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
+
+
                             <!-- /.card-body -->
-                            {{-- <div class="card-footer clearfix">
-                                <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                                </ul>
-                            </div> --}}
+
                         </div>
                         <!-- /.card -->
 
@@ -104,18 +87,28 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Default Modal</h4>
+                            <h4 class="modal-title">Adicionar</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <p>One fine body…</p>
-                        </div>
-                        <div class="modal-footer justify-content-between">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="{{ route('admin.pages.rifa.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="modal-body">
+                                <label for="">Imagem</label>
+                                <input type="file" name="image" class="form-control">
+
+                                <label for="">Titulo</label>
+                                <input type="text" name="title" class="form-control">
+
+                                <label for="">Qtd Númers</label>
+                                <input type="text" name="num" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
+                            </div>
+                        </form>
                     </div>
                     <!-- /.modal-content -->
                 </div>

@@ -9,7 +9,7 @@
                     <h1>
                         Seja parceiro da destaque notícias e ganhe prêmios
                     </h1><br>
-                    <img src="{{ asset('home/images/iphone.jpg') }}" alt="" width="100">
+                    <img src="{{ asset('home/images/iphone.jpg') }}" alt="" width="200">
                     <h3><strong>Escolha um número e concorra a um iphone 15</strong></h3>
 
                 </div>

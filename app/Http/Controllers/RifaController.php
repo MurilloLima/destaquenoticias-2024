@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rifa;
-use App\Models\User;
-use App\Models\view;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Intervention\Image\Laravel\Facades\Image;
+
 
 class RifaController extends Controller
 {
@@ -36,7 +37,28 @@ class RifaController extends Controller
      */
     public function store(Request $request)
     {
-        Rifa::factory()->count(50)->hasPosts(1)->create();
+         if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $imageName = time() . '.' . $request->image->extension();
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->extension();
+
+            $destinationPathThumbnail = public_path('upload/rifas');
+            $img = Image::read($image->path());
+            $img->resize(400, 250, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPathThumbnail . '/' . $imageName);
+
+            $destinationPath = public_path('/rifas');
+            $image->move($destinationPath, $imageName);
+
+            $this->rifa->image = $imageName;
+            $this->rifa->title = $request->title;
+            $this->rifa->num = $request->num;
+            $this->rifa->slug = Str::slug($request->title, '-');
+            $this->rifa->save();
+
+            return redirect()->back()->with('msg', 'Adicionado com sucesso!');
+        }
     }
 
     /**

@@ -15,7 +15,8 @@
                 </div>
                 <form action="" method="post">
                     <div class="news-post article-post">
-                        <ul class="pagination-list" style="background-color: #1866CF; padding: 20px; border-radius: 5px;">
+                        <ul class="pagination-list"
+                            style="background-color: #1866CF; padding: 20px;">
                             <li class="rifa">
 
                                 <?php foreach($rifanum as $item): ?>

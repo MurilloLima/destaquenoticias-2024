@@ -83,6 +83,12 @@ Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.
 //pesquisar
 Route::post('pesquisar/', [HomeController::class, 'search'])->name('home.pages.search.index');
 
+//rifas
+Route::get('parceiros/rifas/', [HomeController::class, 'rifas'])->name('home.pages.rifas.index');
+
+
+
+
 Route::get('/dashboard', function () {
     $totalnews = Noticia::all();
     return view('admin.pages.index',  compact('totalnews'));

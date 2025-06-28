@@ -176,7 +176,7 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a href="{{ route('home.pages.parceiro.index') }}" class="nav-link tech"
+                         <a href="{{ route('home.pages.rifas.index') }}" class="nav-link tech"
                              href="#">Seja parceiro</a>
                      </li>
 

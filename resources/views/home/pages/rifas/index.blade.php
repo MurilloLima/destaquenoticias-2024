@@ -17,20 +17,19 @@
                     <div class="news-post article-post">
                         <ul class="pagination-list" style="background-color: #1866CF; padding: 20px; border-radius: 5px;">
                             <li class="rifa">
-                                <?php
-                                    $data = [];
-                                    foreach($data as $item):
-                                ?>
-
-                                <a href="" class="btn" style="width: 40px;">
-                                    01
-                                </a>
-                                <?php endforeach; ?>
+                                @php
+                                    $i = 1;
+                                    while ($i <= 1000):
+                                        echo '<a href="" class="btn">' . $i . '</a>';
+                                        $i++;
+                                    endwhile;
+                                @endphp
+                            </li>
                         </ul>
                     </div>
                 </form>
 
-                <div class="news-post article-post" style="background-color: #1866CF; padding: 26px; color: #FFF">
+                {{-- <div class="news-post article-post" style="background-color: #1866CF; padding: 26px; color: #FFF">
                     <ul class="pagination-list">
                         <h3 style="color: #FFF;">Número já escolhidos</h3>
                         @foreach ($parceiro as $item)
@@ -44,7 +43,7 @@
                             </li> <br>
                         @endforeach
                     </ul>
-                </div>
+                </div> --}}
                 <div class="row">
                     <div class="col-md-12">
                         <p style="text-align: justify;">

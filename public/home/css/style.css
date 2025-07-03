@@ -25,6 +25,7 @@
     color: #FFF !important;
     margin: 3px;
     width: 60px;
+    padding: 0px !important;
 
 }
 
@@ -149,7 +150,7 @@ a {
 .header-banner-place {
     width: 100%;
     padding: 40px 0;
-    background: #00A7B3;
+    background: #FFF;
     overflow: hidden;
 }
 
@@ -300,7 +301,7 @@ header.active .navbar {
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     overflow: hidden;
-    background: #00A0B0;
+    background: #1865D1;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 

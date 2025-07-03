@@ -1,6 +1,5 @@
 @extends('home.layout.app')
 @section('title', 'Parceiro')
-
 @section('content')
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
@@ -37,8 +36,8 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            Número {{ $id }} escolhido, para finalizar preencha os campos abaixo. <br>
-                            <form action="{{ route('home.pages.parceiro.store') }}" id="contact-form" method="POST">
+                            Para finalizar preencha os campos abaixo. <br>
+                            <form action="{{ route('home.pages.rifas.store') }}" id="contact-form" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-4">
@@ -46,13 +45,13 @@
                                         <input class="form-control" name="name" type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="text">Whatsapp*</label>
-                                        <input class="form-control" name="wt" type="text" required>
+                                        <label for="text">CPF*</label>
+                                        <input class="form-control" name="cpf" type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="E-mail">E-mail</label>
-                                        <input class="form-control" name="email" type="email" required>
-                                        <input class="form-control" name="number" type="hidden" value="{{ $id }}">
+                                        <label for="E-mail">Telefone</label>
+                                        <input class="form-control" name="tel" type="text" required>
+
                                     </div>
                                 </div>
                                 <br>

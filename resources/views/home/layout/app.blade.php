@@ -148,23 +148,11 @@
             document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
         }, false);
     </script>
-    {{-- face --}}
-    <script>
-        //Constrói a URL depois que o DOM estiver pronto
-        document.addEventListener("DOMContentLoaded", function() {
-            //altera a URL do botão
-            document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" +
-                encodeURIComponent(window.location.href);
-        }, false);
-    </script>
-
 </head>
 
 <body>
     <!-- Container -->
     <div id="container">
-        <!-- Preloader -->
-
         @include('home.layout.nav')
         @yield('content')
         @include('home.layout.footer')

@@ -77,15 +77,16 @@ Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.i
 
 //parceiros
 Route::get('parceiro/', [ParceiroController::class, 'index'])->name('home.pages.parceiro.index');
-Route::get('parceiro/show/{id}', [ParceiroController::class, 'show'])->name('home.pages.parceiro.show');
-Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.pages.parceiro.store');
+Route::get('show/{id}', [ParceiroController::class, 'show'])->name('home.pages.parceiro.show');
+Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.pages.rifas.store');
 
 //pesquisar
 Route::post('pesquisar/', [HomeController::class, 'search'])->name('home.pages.search.index');
 
 //rifas
 Route::get('parceiros/rifas/', [RifaController::class, 'index'])->name('home.pages.rifas.index');
-Route::post('rifa/store', [RifaController::class, 'store'])->name('home.pages.parceiro.store');
+Route::get('parceiros/rifas/{id}', [RifaController::class, 'show'])->name('home.pages.rifas.show');
+Route::post('rifa/store', [RifaController::class, 'store'])->name('home.pages.rifas.store');
 
 
 

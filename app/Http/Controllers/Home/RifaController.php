@@ -8,6 +8,7 @@ use App\Models\Classificado;
 use App\Models\Noticia;
 use App\Models\Parceiro;
 use App\Models\Publicidade;
+use App\Models\view;
 use Illuminate\Http\Request;
 
 class RifaController extends Controller
@@ -31,9 +32,10 @@ class RifaController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-        $parceiro = Parceiro::all();
+        $parceiro = [];
+        $rifa = Noticia::all();
 
-        return view('home.pages.rifas.index', compact('parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.rifas.index', compact('rifa','parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**
@@ -49,7 +51,21 @@ class RifaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $request->validate([
+            'name' => 'required',
+            'cpf' => 'required',
+            'tel' => 'required',
+            'number' => 'required',
+        ]);
+
+       Parceiro::create([
+            'name' => $request->name,
+            'cpf' => $request->cpf,
+            'tel' => $request->tel,
+            'number' => $request->number,
+       ]);
+        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+
     }
 
     /**
@@ -57,7 +73,22 @@ class RifaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $cidades = Categoria::latest()->get();
+        $classificados = Classificado::latest()->get();
+        $noticias3 = Noticia::orderBy('id', 'DESC')->take(3)->get();
+        $noticias6 = Noticia::orderBy('id', 'DESC')->skip(3)->take(6)->get();
+        // dd($noticias3);
+        $brasil = Noticia::where('cat_id', '=', 6)->orderBy('id', 'DESC')->limit(4)->get();
+        $esporte = Noticia::where('cat_id', '=', 5)->orderBy('id', 'DESC')->limit(4)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem = Noticia::inRandomOrder()->limit(10)->get();
+        $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+        $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
+        $parceiro = [];
+        return view('home.pages.rifas.show', compact('parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

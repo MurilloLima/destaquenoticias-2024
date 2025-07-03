@@ -18,11 +18,9 @@
                         <ul class="pagination-list" style="background-color: #1866CF; padding: 20px; border-radius: 5px;">
                             <li class="rifa">
                                 @php
-                                    $i = 1;
-                                    while ($i <= 1000):
-                                        echo '<a href="" class="btn">' . $i . '</a>';
-                                        $i++;
-                                    endwhile;
+                                    for ($i = 1; $i <= 1000; $i++) {
+                                        echo '<a href="https://destaquenoticias.com/parceiros/rifas/'.$i.' "class="btn">' . $i . '</a>';
+                                    }
                                 @endphp
                             </li>
                         </ul>

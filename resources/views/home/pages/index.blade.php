@@ -2,28 +2,24 @@
 @section('title', 'Home')
 
 @section('content')
-    <!-- wide-news-heading                                                                                                                                     ================================================== -->
-    <div class="wide-news-heading">
+    <!-- Slider main container -->
+    <div class="wide-news-heading" style="opacity: 1;">
 
         <div class="item main-news">
 
             <div class="flexslider">
                 <ul class="slides">
                     @foreach ($noticias3 as $item)
-                        <li>
+                        <li class=""
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
                             <div class="news-post large-image-post">
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
-                                    <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
-                                        class="category category-world">{{ $item->categoria->name }}</a>
-                                    <h2>
-                                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}
-                                        </a>
-                                    </h2>
+                                    <a href="index.html#" class="category category">Politic</a>
+                                    <h2><a href="single-post.html">Syrian crise, violence, refugees ...</a></h2>
                                     <ul class="post-tags">
-                                        <li>
-                                            <i class="lnr lnr-user"></i>
-                                            <a href="#">Administrador</a>
+                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
+                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -31,31 +27,40 @@
                         </li>
                     @endforeach
                 </ul>
+                <ol class="flex-control-nav flex-control-paging">
+                    <li><a class="">1</a></li>
+                    <li><a class="">2</a></li>
+                    <li><a class="flex-active">3</a></li>
+                </ol>
+                <ul class="flex-direction-nav">
+                    <li><a class="flex-prev" href="#"></a></li>
+                    <li><a class="flex-next" href="#"></a></li>
+                </ul>
             </div>
+
         </div>
         @foreach ($noticias6 as $item)
             <div class="item">
                 <div class="news-post image-post">
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
-                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
-                            class="category category">{{ $item->categoria->name }}</a>
-                        <h2>
-                            <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}
-                        </h2>
+                        <a href="index.html#" class="category category-world">Politic</a>
+                        <h2><a href="single-post.html">{{ $item->title }}</a></h2>
                         <ul class="post-tags">
-                            {{-- <li><i class="lnr lnr-user"></i><a href="#">Administrador</a></li> --}}
-                            {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
+                            <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
+                            <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         @endforeach
+
+
     </div>
-    <!-- End wide-news-heading -->
+    <!-- End slider -->
 
     <!-- content-section
-                                                                                                                                                                                               ================================================== -->
+                                                                                                                                                                                                                                                               ================================================== -->
     <section id="content-section">
         <div class="container">
 

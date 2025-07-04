@@ -44,7 +44,7 @@ class ParceiroController extends Controller
         $rifanum = Rifa::all();
 
 
-        return view('home.pages.parceiros.index', compact('rifanum', 'parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.rifas.index', compact('rifanum', 'parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

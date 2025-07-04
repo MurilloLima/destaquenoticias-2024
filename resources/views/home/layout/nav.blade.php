@@ -45,7 +45,7 @@
 
              <div class="advertisement" style="float: right;">
                  <a href="{{ route('home.pages.parceiro.index') }}">
-                     <img class="imagem" src="{{ asset('home/images/680x80.png') }}" alt="">
+                     <img class="imagem" src="{{ asset('home/images/iphone.png') }}" alt="">
                  </a>
              </div>
          </div>

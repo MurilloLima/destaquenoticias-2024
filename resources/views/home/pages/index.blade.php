@@ -15,8 +15,8 @@
                             <div class="news-post large-image-post">
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
-                                    <a href="index.html#" class="category category">Politic</a>
-                                    <h2><a href="single-post.html">Syrian crise, violence, refugees ...</a></h2>
+                                    <a href="{{ route('home.pages.noticias.index', [$item->slug]) }}" class="category category">Politic</a>
+                                    <h2><a href="{{ route('home.pages.noticias.index', [$item->slug]) }}">Syrian crise, violence, refugees ...</a></h2>
                                     <ul class="post-tags">
                                         <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
                                         <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
@@ -44,11 +44,11 @@
                 <div class="news-post image-post">
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
-                        <a href="index.html#" class="category category-world">Politic</a>
-                        <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}" class="category category-world">Politic</a>
+                        <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                         <ul class="post-tags">
                             {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}
-                            <li><a href="index.html#"><i class="lnr lnr-book"></i><span>{{ $item->created_at }}</span></a></li>
+                            <li><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"><i class="lnr lnr-book"></i><span>{{ $item->created_at }}</span></a></li>
                         </ul>
                     </div>
                 </div>

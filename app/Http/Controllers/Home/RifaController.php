@@ -33,8 +33,9 @@ class RifaController extends Controller
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
         $rifa = Noticia::all();
+        $parceiros = Parceiro::latest()->get();
 
-        return view('home.pages.rifas.index', compact('rifa', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.rifas.index', compact('rifa', 'parceiros', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

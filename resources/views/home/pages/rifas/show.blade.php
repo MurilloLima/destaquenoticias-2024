@@ -34,7 +34,7 @@
                         @endif
                     </div>
                 </div>
-                <form action="{{ route('home.pages.parceiro.store') }}" method="post">
+                <form action="{{ route('home.pages.rifas.store') }}" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-md-12">

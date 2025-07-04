@@ -15,11 +15,17 @@
                             <div class="news-post large-image-post">
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
-                                    <a href="{{ route('home.pages.noticias.index', [$item->slug]) }}" class="category category">Politic</a>
-                                    <h2><a href="{{ route('home.pages.noticias.index', [$item->slug]) }}">Syrian crise, violence, refugees ...</a></h2>
+                                    <a href="{{ route('home.pages.noticias.index', [$item->slug]) }}"
+                                        class="category category">{{ $item->categoria->name }}</a>
+                                    <h2><a
+                                            href="{{ route('home.pages.noticias.index', [$item->slug]) }}">{{ $item->title }}</a>
+                                    </h2>
                                     <ul class="post-tags">
-                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
+                                        {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}
+                                        <li>
+                                            <a href="{{ route('home.pages.noticias.index', [$item->slug]) }}">
+                                                <i class="lnr lnr-book"></i><span>{{ $item->desc }}</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -27,7 +33,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <ol class="flex-control-nav flex-control-paging">
+                {{-- <ol class="flex-control-nav flex-control-paging">
                     <li><a class="">1</a></li>
                     <li><a class="">2</a></li>
                     <li><a class="flex-active">3</a></li>
@@ -35,7 +41,7 @@
                 <ul class="flex-direction-nav">
                     <li><a class="flex-prev" href="#"></a></li>
                     <li><a class="flex-next" href="#"></a></li>
-                </ul>
+                </ul> --}}
             </div>
 
         </div>
@@ -44,11 +50,15 @@
                 <div class="news-post image-post">
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
-                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}" class="category category-world">Politic</a>
+                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
+                            class="category category-world">{{ $item->categoria->name }}</a>
                         <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
-                        <ul class="post-tags">
-                            {{-- <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li> --}}
-                            <li><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"><i class="lnr lnr-book"></i><span>{{ $item->created_at }}</span></a></li>
+                       {{--  <ul class="post-tags">
+                            <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
+                            <li>
+                                <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"><i
+                                        class="lnr lnr-book"></i><span>{{ date('d/m/Y', strtotime($item->created_at)) }}</span></a>
+                            </li>--}}
                         </ul>
                     </div>
                 </div>
@@ -60,7 +70,7 @@
     <!-- End slider -->
 
     <!-- content-section
-                                                                                                                                                                                                                                                               ================================================== -->
+                                                                                                                                                                                                                                                                                               ================================================== -->
     <section id="content-section">
         <div class="container">
 

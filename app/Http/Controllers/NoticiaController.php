@@ -9,6 +9,7 @@ use App\Models\Publicidade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image;
+use PHPUnit\Framework\TestStatus\Notice;
 
 class NoticiaController extends Controller
 {
@@ -22,8 +23,8 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->paginate(20);
-        $totalnews = Noticia::all();
+        $noticias = Noticia::latest()->paginate(20);
+        $totalnews = Noticia::latest();
         return view('admin.pages.noticias.index', compact(['noticias', 'totalnews']));
     }
 

@@ -14,7 +14,7 @@
 
                 <div class="col-lg-8">
                     <div class="single-post">
-                        <h1>{{ $data->title }}</h1>
+                        <h1 style="font-size: 20px;">{{ $data->title }}</h1>
                         <p>{{ $data->desc }}</p>
                         <ul class="post-tags">
                             <li>

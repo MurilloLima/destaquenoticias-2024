@@ -26,6 +26,8 @@
                                 <div class="col-md-12" \>
                                     <div class="alert alert-success text-center" style="color: white; margin: 10px;">
                                         {{ session('msg') }}
+                                        <span>Para finalizar a compra realize o pagamento</span> <br><br>
+                                        <img src="{{ asset('home/images/qrcode.png') }}" width="100" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -39,6 +41,7 @@
                             Para finalizar preencha os campos abaixo. <br>
                             <form action="{{ route('home.pages.rifas.store') }}" id="contact-form" method="POST">
                                 @csrf
+                                <input type="hidden" name="id" value="{{ $id }}">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <label for="name">Nome completo*</label>
@@ -51,12 +54,11 @@
                                     <div class="col-md-4">
                                         <label for="E-mail">Telefone</label>
                                         <input class="form-control" name="tel" type="text" required>
-
                                     </div>
                                 </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-paper-plane"></i> Comprar
+                                     Comprar
                                 </button>
                                 <div id="msg" class="alert"></div>
                             </form>

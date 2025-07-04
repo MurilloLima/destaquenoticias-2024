@@ -32,10 +32,9 @@ class RifaController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-        $parceiro = [];
         $rifa = Noticia::all();
 
-        return view('home.pages.rifas.index', compact('rifa','parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.rifas.index', compact('rifa', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**
@@ -51,21 +50,19 @@ class RifaController extends Controller
      */
     public function store(Request $request)
     {
-       $request->validate([
+        $request->validate([
             'name' => 'required',
             'cpf' => 'required',
             'tel' => 'required',
-            'number' => 'required',
         ]);
 
-       Parceiro::create([
+        Parceiro::create([
             'name' => $request->name,
             'cpf' => $request->cpf,
             'tel' => $request->tel,
-            'number' => $request->number,
-       ]);
-        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
-
+            'number' => $request->id
+        ]);
+        return redirect()->back()->with('msg', 'Número reservado com sucesso!');
     }
 
     /**
@@ -87,8 +84,7 @@ class RifaController extends Controller
         $destaque = Noticia::inRandomOrder()->first();
         $publicidade = Publicidade::all();
         $maranhao = Noticia::where('cat_id', '=', 2)->orderBy('id', 'DESC')->take(4)->latest()->get();
-        $parceiro = [];
-        return view('home.pages.rifas.show', compact('parceiro', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+        return view('home.pages.rifas.show', compact('id', 'cidades', 'noticias3', 'classificados', 'noticias6', 'brasil', 'esporte', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

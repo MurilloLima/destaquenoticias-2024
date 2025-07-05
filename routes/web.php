@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ParceirosController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\Home\ContatoController;
 use App\Http\Controllers\CadastroController;
@@ -10,7 +11,6 @@ use App\Http\Controllers\ClassificadoController;
 use App\Http\Controllers\DenunciaController;
 use App\Http\Controllers\DepoimentoController;
 use App\Http\Controllers\Home\HomeController;
-use App\Http\Controllers\Home\ParceiroController;
 use App\Http\Controllers\InformativoController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
@@ -74,11 +74,6 @@ Route::get('privacy/', [HomeController::class, 'privacy'])->name('home.pages.pri
 
 //sobre
 Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
-
-//parceiros
-Route::get('parceiro/', [ParceiroController::class, 'index'])->name('home.pages.parceiro.index');
-Route::get('show/{id}', [ParceiroController::class, 'show'])->name('home.pages.parceiro.show');
-Route::post('parceiro/store', [ParceiroController::class, 'store'])->name('home.pages.rifas.store');
 
 //pesquisar
 Route::post('pesquisar/', [HomeController::class, 'search'])->name('home.pages.search.index');
@@ -159,6 +154,9 @@ Route::middleware('auth')->group(function () {
     //rifa
     Route::get('admin/rifas', [RifaController::class, 'index'])->name('admin.pages.rifa.index');
     Route::post('admin/rifa/store', [RifaController::class, 'store'])->name('admin.pages.rifa.store');
+
+    //parceiro
+    Route::get('admin/parceiros', [ParceirosController::class, 'index'])->name('admin.pages.parceiros.index');
 });
 
 

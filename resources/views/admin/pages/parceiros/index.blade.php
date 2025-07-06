@@ -48,7 +48,7 @@
                                             <th>CPF</th>
                                             <th>Telefone</th>
                                             <th style="width: 140px">Numero</th>
-                                            <th style="width: 70px">#</th>
+                                            {{-- <th style="width: 70px">#</th> --}}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,11 +59,12 @@
                                                 <td>{{ $item->cpf }}</td>
                                                 <td>{{ $item->tel }}</td>
                                                 <td>{{ $item->number }}</td>
-                                                <td>
-                                                    <a href="" title="Excluir">
+                                                {{-- <td>
+                                                    <a href="{{ route('admin.pages.parceiros.destroy', [$item->id]) }}"
+                                                        title="Excluir">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @endforeach
                                     </tbody>

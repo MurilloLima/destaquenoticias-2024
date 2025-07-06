@@ -63,6 +63,7 @@ class ParceirosController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Parceiro::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

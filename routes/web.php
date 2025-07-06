@@ -157,6 +157,8 @@ Route::middleware('auth')->group(function () {
 
     //parceiro
     Route::get('admin/parceiros', [ParceirosController::class, 'index'])->name('admin.pages.parceiros.index');
+    Route::get('admin/parceiros/delete/{id}', [ParceirosController::class, 'destroy'])->name('admin.pages.parceiros.destroy');
+
 });
 
 

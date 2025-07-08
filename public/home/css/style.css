@@ -247,7 +247,7 @@ header.active .navbar {
     -o-transition: all 0.2s ease-in-out;
     top: 0;
     left: 0;
-    background: #00A0B0;
+    background: #1865D1;
 }
 
 .navbar-nav>li>a.world:before {

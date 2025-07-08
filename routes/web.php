@@ -11,6 +11,7 @@ use App\Http\Controllers\ClassificadoController;
 use App\Http\Controllers\DenunciaController;
 use App\Http\Controllers\DepoimentoController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Home\ParceiroController;
 use App\Http\Controllers\InformativoController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
@@ -157,8 +158,7 @@ Route::middleware('auth')->group(function () {
 
     //parceiro
     Route::get('admin/parceiros', [ParceirosController::class, 'index'])->name('admin.pages.parceiros.index');
-    Route::delete('admin/parceiros/delete/{id}', [ParceirosController::class, 'destroy'])->name('admin.pages.parceiros.destroy');
-
+    Route::post('admin/parceiro/destroy', [ParceirosController::class, 'destroy'])->name('admin.pages.parceiros.destroy')->middleware(['auth']);;
 });
 
 

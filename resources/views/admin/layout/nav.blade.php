@@ -116,9 +116,7 @@
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <button type="submit" class="btn btn-danger form-control">
-                            <p>Sair</p>
-                        </button>
+                        <button type="submit" class="btn btn-block btn-dark btn-xs">Sair</button>
                     </form>
                     </a>
                 </li>

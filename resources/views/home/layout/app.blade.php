@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" href="{{ asset('home/images/icon.png') }}" />
 
+    {{-- favicon --}}
+    <link rel="icon" href="{{ asset('home/images/icon.png') }}" sizes="any">
+    <link rel="icon" type="image/png" href="{{ asset('home/images/icon.png') }}" rel="icon">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
         rel="stylesheet">

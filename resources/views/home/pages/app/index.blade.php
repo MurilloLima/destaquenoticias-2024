@@ -16,7 +16,9 @@
 
                         <div class="text-boxes">
                             <img src="{{ asset('home/images/app.png') }}" style="width: 200px;" alt=""><br>
-                            <a class="btn btn-primary" href="{{ asset('home/destaquenoticias.apk') }}">Instalar</a><br><br><br>
+                            <a class="btn btn-primary"
+                                href="application-8141d939-b6b6-49fb-8f05-afbadf10b0a3.apk">Instalar</a>
+                            <br><br><br>
                         </div>
                     </div>
                     <!-- End single-post -->
